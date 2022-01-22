@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3746370854281808684}
   - component: {fileID: 1297087642472871061}
   m_Layer: 0
-  m_Name: New SkeletonRenderer
+  m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
