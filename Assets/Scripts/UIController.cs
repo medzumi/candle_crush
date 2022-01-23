@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
+    [DefaultExecutionOrder(-1)]
     [RequireComponent(typeof(Canvas))]
     public class UIController : Singletone<UIController>
     {

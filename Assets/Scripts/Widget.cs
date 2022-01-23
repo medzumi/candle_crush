@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DefaultNamespace
 {
@@ -8,6 +9,9 @@ namespace DefaultNamespace
     {
         private Animator _animator;
         [SerializeField] private bool _showOnStart = false;
+
+        public UnityEvent OnHide;
+        public UnityEvent OnShow;
         
         public string WidgetName;
         private bool _isShowed;
@@ -94,12 +98,14 @@ namespace DefaultNamespace
         void ShowHandler()
         {
             _isShowed = true;
+            OnShow.Invoke();
         }
         
         void HideHandler()
         {
             gameObject.SetActive(false);
             _isShowed = false;
+            OnHide.Invoke();
         }
 
         private void StopCoroutine()
