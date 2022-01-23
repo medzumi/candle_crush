@@ -1,0 +1,110 @@
+main_character.png
+	size: 1396, 795
+	filter: Linear, Linear
+	pma: true
+01
+	bounds: 288, 371, 211, 187
+	offsets: 146, 355, 602, 602
+02
+	bounds: 497, 564, 207, 229
+	offsets: 144, 349, 602, 602
+03
+	bounds: 706, 564, 203, 229
+	offsets: 142, 352, 602, 602
+04
+	bounds: 288, 560, 207, 233
+	offsets: 140, 353, 602, 602
+05
+	bounds: 474, 205, 164, 222
+	offsets: 182, 343, 602, 602
+	rotate: 90
+06
+	bounds: 911, 499, 162, 239
+	offsets: 181, 355, 602, 602
+	rotate: 90
+07
+	bounds: 249, 202, 167, 223
+	offsets: 181, 356, 602, 602
+	rotate: 90
+08
+	bounds: 1152, 447, 171, 226
+	offsets: 177, 355, 602, 602
+	rotate: 90
+09
+	bounds: 911, 325, 172, 207
+	offsets: 171, 349, 602, 602
+	rotate: 90
+10
+	bounds: 755, 21, 176, 193
+	offsets: 170, 356, 602, 602
+11
+	bounds: 599, 5, 154, 198
+	offsets: 189, 355, 602, 602
+12
+	bounds: 435, 2, 162, 198
+	offsets: 181, 356, 602, 602
+13
+	bounds: 710, 377, 185, 199
+	offsets: 160, 356, 602, 602
+	rotate: 90
+14
+	bounds: 501, 371, 191, 207
+	offsets: 154, 351, 602, 602
+	rotate: 90
+15
+	bounds: 933, 47, 182, 184
+	offsets: 163, 352, 602, 602
+16
+	bounds: 710, 216, 159, 191
+	offsets: 185, 357, 602, 602
+	rotate: 90
+17
+	bounds: 1194, 620, 173, 200
+	offsets: 176, 352, 602, 602
+	rotate: 90
+18
+	bounds: 249, 2, 184, 198
+	offsets: 160, 349, 602, 602
+19
+	bounds: 1120, 264, 195, 181
+	offsets: 148, 349, 602, 602
+Layer 5
+	bounds: 1279, 60, 84, 56
+	offsets: 284, 338, 602, 602
+	rotate: 90
+Layer 7
+	bounds: 2, 480, 284, 313
+	offsets: 152, 50, 600, 600
+body_black
+	bounds: 911, 663, 130, 281
+	offsets: 251, 23, 602, 602
+	rotate: 90
+coat)back
+	bounds: 903, 233, 90, 210
+	offsets: 343, 101, 602, 602
+	rotate: 90
+coat_behind
+	bounds: 2, 14, 148, 226
+	offsets: 276, 90, 602, 602
+	rotate: 90
+coat_front
+	bounds: 2, 164, 245, 314
+	offsets: 153, 50, 602, 602
+cord
+	bounds: 1120, 452, 25, 45
+	offsets: 292, 291, 602, 602
+head
+	bounds: 1117, 121, 141, 141
+	offsets: 243, 309, 602, 602
+vosk_1
+	bounds: 1117, 33, 160, 86
+	offsets: 174, 77, 602, 602
+vosk_2
+	bounds: 1317, 318, 48, 127
+	offsets: 316, 173, 602, 602
+vosk_3
+	bounds: 1260, 146, 83, 116
+	offsets: 193, 166, 602, 602
+vosk_5
+	bounds: 249, 399, 37, 79
+	offsets: 390, 145, 602, 602
