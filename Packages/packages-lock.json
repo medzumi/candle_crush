@@ -131,6 +131,15 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "dev.yarnspinner.unity": {
+      "version": "https://github.com/YarnSpinnerTool/YarnSpinner-Unity.git#v2.0.2",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "1.4.1"
+      },
+      "hash": "15c8efdfaeb5fe487988edb32eb68a354adbd4fd"
+    },
     "net.skaillz.tidalwav": {
       "version": "https://github.com/SkaillZ/tidalwav.git",
       "depth": 0,
