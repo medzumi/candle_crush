@@ -265,6 +265,34 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8128026268582545199}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430910, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: m_Name
       value: KeyInput
