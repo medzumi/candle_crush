@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using Spine.Unity;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private CharacterController _characterController;
+    [SerializeField] private Transform _skeletonFlipper;
+    [SerializeField] private Animator _animator;
     [SerializeField] private float _speed;
 
     private readonly Dictionary<Type, Dictionary<string, object>> _playerData = new Dictionary<Type, Dictionary<string, object>>();
@@ -51,6 +54,17 @@ public class Player : MonoBehaviour
         }
 
         direction = transform.rotation * direction;
+        var xAbsDirection = Mathf.Abs(direction.x);
+        var zAbsDirection = Mathf.Abs(direction.z);
+        if (direction.magnitude > Mathf.Epsilon)
+        {
+            var currentScale = _skeletonFlipper.localScale;
+            var multiplier = direction.x >= 0 ? 1 : -1;
+            _skeletonFlipper.localScale = new Vector3(Mathf.Abs(currentScale.x) * multiplier, currentScale.y, currentScale.z);
+            _animator.SetFloat("Forward", direction.z);
+            _animator.SetBool("IsHorizontalMove", Mathf.Abs(direction.z) < Mathf.Epsilon);
+        }
+        _animator.SetFloat("Speed", direction.magnitude);
         _characterController.Move(direction.normalized * _speed * Time.deltaTime);
     }
 }
