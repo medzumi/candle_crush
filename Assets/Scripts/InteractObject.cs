@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,6 +16,22 @@ public class InteractObject : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out Player player))
+        {
+            OnExitTriggerWithPlayer.Invoke(player);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.TryGetComponent(out Player player))
+        {
+            OnTriggerWithPlayer.Invoke(player);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.TryGetComponent(out Player player))
         {

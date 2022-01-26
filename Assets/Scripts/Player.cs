@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private CharacterController _characterController;
+    [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private Transform _skeletonFlipper;
     [SerializeField] private Animator _animator;
     [SerializeField] private float _speed;
@@ -30,41 +30,41 @@ public class Player : MonoBehaviour
     
     private void Reset()
     {
-        _characterController = GetComponent<CharacterController>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        var direction = Vector3.zero;
+        var direction = Vector2.zero;
         if (Input.GetKey(KeyCode.W))
         {
-            direction += Vector3.forward;
+            direction += Vector2.up;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            direction += Vector3.left;
+            direction += Vector2.left;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            direction += Vector3.back;
+            direction += Vector2.down;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            direction += Vector3.right;
+            direction += Vector2.right;
         }
 
         direction = transform.rotation * direction;
         var xAbsDirection = Mathf.Abs(direction.x);
-        var zAbsDirection = Mathf.Abs(direction.z);
+        var zAbsDirection = Mathf.Abs(direction.y);
         if (direction.magnitude > Mathf.Epsilon)
         {
             var currentScale = _skeletonFlipper.localScale;
             var multiplier = direction.x >= 0 ? 1 : -1;
             _skeletonFlipper.localScale = new Vector3(Mathf.Abs(currentScale.x) * multiplier, currentScale.y, currentScale.z);
-            _animator.SetFloat("Forward", direction.z);
-            _animator.SetBool("IsHorizontalMove", Mathf.Abs(direction.z) < Mathf.Epsilon);
+            _animator.SetFloat("Forward", direction.y);
+            _animator.SetBool("IsHorizontalMove", Mathf.Abs(direction.y) < Mathf.Epsilon);
         }
         _animator.SetFloat("Speed", direction.magnitude);
-        _characterController.Move(direction.normalized * _speed * Time.deltaTime);
+        _rigidbody.MovePosition(_rigidbody.position + (direction*_speed*Time.deltaTime ));
     }
 }
