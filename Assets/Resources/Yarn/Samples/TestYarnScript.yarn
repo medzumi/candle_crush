@@ -1,0 +1,39 @@
+title: Start
+tags:
+colorID: 0
+position: 0,0
+---
+// A test script used in Editor unit tests
+Spieler: Kannst du mich hören? #line:0e3dc4b
+NPC: Klar und deutlich. #line:0967160
+-> Mir reicht es. #line:04e806e
+    <<jump Exit>>
+-> Nochmal! #line:0901fb2
+    <<jump Start>>
+===
+title: Exit
+tags: 
+colorID: 0
+position: 0,0
+--- 
+===
+title: Sally
+tags:
+colorID: 0
+position: 0,0
+---
+Player: Hey, Sally. #line:794945
+Sally: Oh! Hi. #line:2dc39b
+Sally: You snuck up on me. #line:34de2f
+Sally: Don't do that. #line:dcc2bc
+===
+title: Sally_2
+tags:
+colorID: 0
+position: 0,0
+---
+Player: Hey, Sally_2. #line:794946
+Sally: Oh! Hi. #line:2dc39c
+Sally: ... #line:34de2e
+Sally: ... #line:dcc2bd
+===

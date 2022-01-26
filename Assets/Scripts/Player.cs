@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _speed;
 
     private readonly Dictionary<Type, Dictionary<string, object>> _playerData = new Dictionary<Type, Dictionary<string, object>>();
+    private Vector2 _translation = Vector2.zero;
 
     public T GetData<T>(string key) where T : class, new()
     {
@@ -53,7 +54,7 @@ public class Player : MonoBehaviour
             direction += Vector2.right;
         }
 
-        direction = transform.rotation * direction;
+        direction = transform.rotation * direction.normalized;
         var xAbsDirection = Mathf.Abs(direction.x);
         var zAbsDirection = Mathf.Abs(direction.y);
         if (direction.magnitude > Mathf.Epsilon)
@@ -65,6 +66,13 @@ public class Player : MonoBehaviour
             _animator.SetBool("IsHorizontalMove", Mathf.Abs(direction.y) < Mathf.Epsilon);
         }
         _animator.SetFloat("Speed", direction.magnitude);
-        _rigidbody.MovePosition(_rigidbody.position + (direction*_speed*Time.deltaTime ));
+        _translation += direction * _speed * Time.deltaTime;
+        
+    }
+
+    private void FixedUpdate()
+    {
+        _rigidbody.MovePosition(_rigidbody.position + (_translation*_speed*Time.deltaTime ));
+        _translation = Vector2.zero;
     }
 }

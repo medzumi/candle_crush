@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 8128026269454760665}
   - component: {fileID: 8128026269454760664}
   - component: {fileID: 9062766763494200391}
+  - component: {fileID: 5640917363058905121}
   m_Layer: 0
   m_Name: NPCSample
   m_TagString: Untagged
@@ -174,6 +175,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.95}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &5640917363058905121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8128026269454760487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ee94dca84e705409fc0dffcfcfc67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  NPCName: Sally
 --- !u!1001 &5119395641107115857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,18 +204,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8128026268582545199}
     - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5640917363058905121}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
@@ -206,11 +235,23 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ShowDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NPCDialog, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430910, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
