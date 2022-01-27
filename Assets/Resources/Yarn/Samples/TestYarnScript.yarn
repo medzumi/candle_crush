@@ -1,39 +1,44 @@
 title: Start
-tags:
-colorID: 0
-position: 0,0
 ---
-// A test script used in Editor unit tests
-Spieler: Kannst du mich hören? #line:0e3dc4b
-NPC: Klar und deutlich. #line:0967160
--> Mir reicht es. #line:04e806e
+Pinee: Wait a second here. Is that a new face I’m seeing? 
+Pinee: If you can call that flame of yours a face, that is. 
+Candlee: …
+Pinee: Whichever it is, good. One more second in this emptiness and I’d start playing chess with myself.
+Pinee: If my eyes do not deceive me, you can see a thing or two in this world. While you’re at it, will you fetch one for me? 
+Pinee: It’s in a box with a cross drawn on it. Inside is a pair of sunglasses. 
+Pinee: Many would - and do, in fact - think that’s a piece of junk in our current state of living, but not me. I’ll make use of it, you just do your thing. So, you on it? 
+Candlee: …
+Pinee: That’s what I thought! Now go, before you burn my eyes down. 
+
+-> Fine, how about you?
+    <<jump Ok>>
+-> I don't want to be
+    <<jump MeToo>>
+===
+title: Ok
+--- 
+Pinee: Fine, ionaizing here!
+<<jump Questions>>
+===
+title: MeToo
+--- 
+Pinee: I understand. I didn't choose to be either.
+<<jump Questions>>
+===
+title: Questions
+--- 
+Pinee:  What do you want to ask?
+-> I didn't choose to be born. And no matter what I do, I can't change it. Whereever I'd go, I'll still ...be. I'll still be prisoner of existance. Maybe, to choose to stop existing is actually the only real freedom I have?
+    <<jump OpenWindow>>
+-> Gotta go.
     <<jump Exit>>
--> Nochmal! #line:0901fb2
-    <<jump Start>>
+===
+title: OpenWindow
+--- 
+Pinee: Jeezz, Candlee, open the fucking window, it getting stuffy.
+<<jump Questions>>
 ===
 title: Exit
-tags: 
-colorID: 0
-position: 0,0
 --- 
-===
-title: Sally
-tags:
-colorID: 0
-position: 0,0
----
-Player: Hey, Sally. #line:794945
-Sally: Oh! Hi. #line:2dc39b
-Sally: You snuck up on me. #line:34de2f
-Sally: Don't do that. #line:dcc2bc
-===
-title: Sally_2
-tags:
-colorID: 0
-position: 0,0
----
-Player: Hey, Sally_2. #line:794946
-Sally: Oh! Hi. #line:2dc39c
-Sally: ... #line:34de2e
-Sally: ... #line:dcc2bd
+Pinee: Bye!
 ===
