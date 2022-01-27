@@ -1,0 +1,26 @@
+bear.png
+	size: 371, 590
+	filter: Linear, Linear
+	pma: true
+body
+	bounds: 2, 260, 240, 328
+	offsets: 191, 64, 602, 602
+hand_back
+	bounds: 2, 2, 80, 151
+	offsets: 193, 198, 602, 602
+	rotate: 90
+hand_front
+	bounds: 244, 268, 97, 174
+	offsets: 315, 191, 602, 602
+hat
+	bounds: 244, 444, 144, 125
+	offsets: 171, 411, 602, 602
+	rotate: 90
+head
+	bounds: 202, 68, 190, 156
+	offsets: 198, 354, 602, 602
+	rotate: 90
+scarf
+	bounds: 2, 84, 174, 198
+	offsets: 211, 217, 602, 602
+	rotate: 90

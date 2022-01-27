@@ -1,0 +1,40 @@
+cat.png
+	size: 426, 553
+	filter: Linear, Linear
+	pma: true
+arm_front
+	bounds: 111, 128, 73, 99
+	offsets: 314, 258, 602, 602
+	rotate: 90
+body
+	bounds: 2, 381, 170, 257
+	offsets: 199, 138, 600, 600
+	rotate: 90
+glasses
+	bounds: 2, 13, 174, 63
+	offsets: 197, 408, 602, 602
+	rotate: 90
+hand_back
+	bounds: 2, 199, 107, 81
+	offsets: 139, 249, 602, 602
+hand_front
+	bounds: 111, 203, 117, 77
+	offsets: 269, 228, 602, 602
+head
+	bounds: 261, 374, 163, 177
+	offsets: 204, 370, 602, 602
+leg_back
+	bounds: 2, 282, 97, 231
+	offsets: 187, 34, 602, 602
+	rotate: 90
+leg_front
+	bounds: 212, 90, 97, 205
+	offsets: 277, 11, 602, 602
+	rotate: 90
+neck
+	bounds: 67, 2, 124, 136
+	offsets: 217, 249, 602, 602
+	rotate: 90
+tail
+	bounds: 235, 189, 189, 183
+	offsets: 276, 38, 602, 602
