@@ -4,17 +4,17 @@ using DefaultNamespace;
 using UnityEngine;
 using Yarn.Unity;
 
-public class AddItem : MonoBehaviour
+public class RemoveItem : MonoBehaviour
 {
-    [SerializeField] private List<UniPair<string, int>> _addItems;
+    [SerializeField] private List<UniPair<string, int>> _items;
 
     private InventorySystem InventorySystem => Singletone<InventorySystem>.Instance;
-
-    public void Add()
+    
+    public void Remove()
     {
-        foreach (var uniPair in _addItems)
+        foreach (var uniPair in _items)
         {
-            InventorySystem.AddItem(uniPair);
+            InventorySystem.RemoveItem(uniPair);
         }
     }
 }

@@ -1412,6 +1412,7 @@ GameObject:
   - component: {fileID: 7745271312530201745}
   - component: {fileID: 2288982706235544739}
   - component: {fileID: 4991470965387198817}
+  - component: {fileID: 6659367058533531882}
   m_Layer: 0
   m_Name: Dialogue System
   m_TagString: Untagged
@@ -1512,3 +1513,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsDontDestroy: 0
   _dialogueRunner: {fileID: 8069315630317329542}
+--- !u!114 &6659367058533531882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8674295065426531579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a09bd410d1b45d38f7160bd90161825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
