@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using Yarn;
@@ -9,6 +11,7 @@ public class NPCDialog : MonoBehaviour
     public UnityEvent OnComplete;
     
     [SerializeField] private string NPCName;
+    [SerializeField] private List<UniPair<string, UnityEvent>> OnCompleteConcreteDialog;
 
     private DialogueRunner _dialogueRunner => DialogRunnerProvider.Instance.DialogueRunner;
 
@@ -24,5 +27,7 @@ public class NPCDialog : MonoBehaviour
         {
             OnComplete.Invoke();
         }
+
+        OnCompleteConcreteDialog.FirstOrDefault(pair => string.Equals(pair.Key, arg0)).Value?.Invoke();
     }
 }
