@@ -1,44 +1,69 @@
-title: Start
+title: Pussy_Start
 ---
-Pinee: Wait a second here. Is that a new face I’m seeing? 
-Pinee: If you can call that flame of yours a face, that is. 
+Pussy: Wait a second here. Is that a new face I’m seeing? 
+Pussy: If you can call that flame of yours a face, that is. 
 Candlee: …
-Pinee: Whichever it is, good. One more second in this emptiness and I’d start playing chess with myself.
-Pinee: If my eyes do not deceive me, you can see a thing or two in this world. While you’re at it, will you fetch one for me? 
-Pinee: It’s in a box with a cross drawn on it. Inside is a pair of sunglasses. 
-Pinee: Many would - and do, in fact - think that’s a piece of junk in our current state of living, but not me. I’ll make use of it, you just do your thing. So, you on it? 
+Pussy: Whichever it is, good. One more second in this emptiness and I’d start playing chess with myself.
+Pussy: If my eyes do not deceive me, you can see a thing or two in this world. While you’re at it, will you fetch one for me? 
+Pussy: It’s in a box with a cross drawn on it. Inside is a pair of sunglasses. 
+Pussy: Many would - and do, in fact - think that’s a piece of junk in our current state of living, but not me. I’ll make use of it, you just do your thing. So, you on it? 
 Candlee: …
-Pinee: That’s what I thought! Now go, before you burn my eyes down. 
+Pussy: That’s what I thought! Now go, before you burn my eyes down. 
 
 -> Fine, how about you?
-    <<jump Ok>>
+    <<jump Pussy_Ok>>
 -> I don't want to be
-    <<jump MeToo>>
+    <<jump Pussy_MeToo>>
 ===
-title: Ok
+title: Pussy_Ok
 --- 
-Pinee: Fine, ionaizing here!
-<<jump Questions>>
+Pussy: Fine, ionaizing here!
+<<jump Pussy_Questions>>
 ===
-title: MeToo
+title: Pussy_MeToo
 --- 
-Pinee: I understand. I didn't choose to be either.
-<<jump Questions>>
+Pussy: I understand. I didn't choose to be either.
+<<jump Pussy_Questions>>
 ===
-title: Questions
+title: Pussy_Questions
 --- 
-Pinee:  What do you want to ask?
+Pussy:  What do you want to ask?
 -> I didn't choose to be born. And no matter what I do, I can't change it. Whereever I'd go, I'll still ...be. I'll still be prisoner of existance. Maybe, to choose to stop existing is actually the only real freedom I have?
-    <<jump OpenWindow>>
+    <<jump Pussy_OpenWindow>>
 -> Gotta go.
-    <<jump Exit>>
+    <<jump Pussy_Exit>>
 ===
-title: OpenWindow
+title: Pussy_OpenWindow
 --- 
-Pinee: Jeezz, Candlee, open the fucking window, it getting stuffy.
-<<jump Questions>>
+Pussy: Jeezz, Candlee, open the fucking window, it getting stuffy.
+<<jump Pussy_Questions>>
 ===
-title: Exit
+title: Pussy_Exit
 --- 
-Pinee: Bye!
+Pussy: Bye!
+===
+title: Mishka_Start
+---
+Mishka: Hello, Candlee!
+Candlee: …
+Mishka: Would be a real shame if someone'd zatoptal you!
+Candlee: …
+<<jump Mishka_Questions>>
+===
+title: Mishka_Questions
+--- 
+Mishka:  What do you want to ask?
+-> Is there someone else in this forest?
+    <<jump Mishka_OnlyCat>>
+-> Gotta go.
+    <<jump Mishka_Exit>>
+===
+title: Mishka_OnlyCat
+--- 
+Mishka: Just me and a cat.
+<<jump Mishka_Questions>>
+===
+title: Mishka_Exit
+--- 
+Mishka: See ya!
 ===

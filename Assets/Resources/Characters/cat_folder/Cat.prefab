@@ -116,7 +116,7 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
-  NPCName: Start
+  StartNode: Pussy_Start
 --- !u!1 &4474116667515466788
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +334,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4474116666121961593}
     m_Modifications:
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3833726110923736910}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NPCDialog, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430899, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: OnKeyCode.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430910, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: m_Name
       value: KeyInput
