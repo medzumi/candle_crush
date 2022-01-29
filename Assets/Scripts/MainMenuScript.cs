@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+    public string MainSceneName;
+
     public void StartGame() {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(MainSceneName);
     }
 }
