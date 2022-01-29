@@ -206,5 +206,71 @@ Star : Thank you.
 <<if $Star_On_Mountain is false>>
 : ...
 <<endif>>
-
+===
+title: Sasha_0
+tags: 
+colorID: 0
+position: 776,1140
+---
+Sasha : Wait a second here. Is that a new face I’m seeing? 
+Sasha : If you can call that flame of yours a face, that is. 
+: ...
+Sasha : Whichever it is, good. One more second in this emptiness and I’d start playing chess with myself.
+Sasha : If my eyes do not deceive me, you can see a thing or two in this world. While you’re at it, will you fetch one for me? 
+Sasha : It’s in a box with a cross drawn on it. Inside is a pair of sunglasses. 
+Sasha : Many would - and do, in fact - think that’s a piece of junk in our current state of living, but not me. 
+Sasha : I’ll make use of it, you just do your thing. So, you on it? 
+: ...
+Sasha : That’s what I thought! Now go, before you burn my eyes down.
+[[Sasha_1]]
+<<set $Sasha to 1>>
+===
+title: Sasha_1
+tags: 
+colorID: 0
+position: 1023,1074
+---
+<<if $Box_With_Cross is 1>>
+    Sasha : Wow, you actually managed to find it! And it’s not even a random box you drew a cross on. Good job.
+    Sasha : Now just let me try these on real quick. 
+    : ...
+    : ...
+    : ...
+    Sasha : So.
+    Sasha : This is what it’s like, huh. 
+    Sasha : I... If my eyesight was like this, I wouldn’t be as cheerful, too. 
+    Sasha : In case you never knew that about a cat or never saw one, cats see well in the dark, that’s what they do.
+    Sasha : And that might be one thing to be jealous of in this world. 
+    Sasha : It certainly does keep one entertained but not for an eternity. 
+    Sasha : So if I change my approach I just might make new connections with others and stay sane. 
+    : ...
+    Sasha : Huh. I’ll have to think about this for a moment. 
+    Sasha : You go. You have a bright personality, you know. Too bright for my eyes at times, even. So go. 
+    : ...
+    <<set $Sasha to 2>>
+<<else>>
+    Sasha : Return once you’ve found the box with a cross drawn on it.    
+<<endif>>
+===
+title: Sasha
+tags: 
+colorID: 0
+position: 410,1183
+---
+<<if $Sasha is 0>>
+    [[Sasha_0]]
+<<endif>>
+<<if $Sasha is 1>>
+    [[Sasha_1]]
+<<endif>>
+<<if $Sasha is 2>>
+    [[Sasha_2]]
+<<endif>>
+===
+title: Sasha_2
+tags: 
+colorID: 0
+position: 894,1394
+---
+Sasha : You still there? Sorry. I haven't gotten used to those glasses yet.
 ===
