@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Bristle_Start",
+		"tags": "",
+		"body": "<<if $Bristle_Start is false>>\n<<set $Bristle_Start to true>>\n    Bristle : ...\n    : ...\n    Bristle : Is this how the world looked like before?...\n    Bristle : I ... Imagined it differently. Less.. White, I think.\n    : ...\n    Bristle : Now that there is light... I think it’s time for me to move on. I’ve been waiting for this. \n    Bristle : Would you help me with that? You seem nice enough. \n    : ...\n    Bristle : I’ll take that as a reluctant yes. \n    Bristle : There must be canvases in my yard. I don’t know where they are exactly… But could you please fetch them and pile them up? \n    Bristle : That’ll make everything easier. Please. \n<<endif>>\n<<if $Canvases_On_Yard is 4>>\n[[Bristle_Complete1]]\n<<else>>\nBristle : Gather my canvas for me, lighty.",
+		"position": {
+			"x": 304,
+			"y": 369
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Bristle_Complete1",
+		"tags": "",
+		"body": "<<if $Bristle_Complete1 is false>>\r\n<<set $Bristle_Complete1 to true>>\r\nBristle : Wait, you actually did that? I didn’t think of a proper gratitude...\r\nBristle : Thank you, I guess. \r\n: ...\r\nBristle : Now, one more thing to ask you. \r\nBristle : Just go near the pile and act carefree.. Like get super near it. And flicker your fire a little bit.\r\nBristle : I don’t know what I had drawn while in the dark. \r\nBristle : I imagined lots of nature and people I love and the night sky. But is it really what’s on the canvases? \r\n: ...\r\n<<endif>>\r\n[[Bristle_Fire_Node]]",
+		"position": {
+			"x": 656,
+			"y": 290
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Pile_To_Fire",
+		"tags": "",
+		"body": "<<if $Bristle_Fire_Count is 0>>\r\n<<endif>>\r\n\r\n<<if $Bristle_Fire_Count is 1>>\r\nBristle : Wait, no! It’s not burning yet, is it? I want to stand near it for a little while longer. \r\nBristle : ...\r\nBristle : ...\r\nBristle : ...\r\n<<endif>>\r\n\r\n<<if $Bristle_Fire_Count is 2>>\r\nBriste : Wait wait wait wait wait. \r\nBristle : I said that out of politeness. I didn't want to keep you waiting. \r\nBristle : I need more time. \r\nBristle : ...\r\nBristle : ...\r\nBristle : ...\r\n<<endif>>\r\n\r\n<<if $Bristle_Fire_Count is 3>>\r\nBristle : STOP!\r\n: ...\r\nBristle : Okay sorry.\r\nBristle : Forget what I asked.\r\nBristle : You don’t need to do that. I don’t want it.\r\n: ...\r\nBristle : It will be far better if I face what I did. It’s scary. \r\nBristle : It will be different from what I imagined but it’s what I did.\r\nBristle : For better or for worse. \r\nBristle : Now go. \r\n<<endif>>\r\n[[Bristle_Fire_Node]]",
+		"position": {
+			"x": 629,
+			"y": 613
+		},
+		"colorID": 7
+	},
+	{
+		"title": "Bristle_Fire_Node",
+		"tags": "",
+		"body": "<<if $Bristle_Fire_Count is 0>>\n<<set $Bristle_Fire_Count to 1>>\nBristle : Okay, what I’m saying is burn the pile. Please.\n<<endif>>\n<<if $Bristle_Fire_Count is 1>>\n<<set $Bristle_Fire_Count to 2>>\nBristle : Okay, now go burn the pile!\n<<endif>>\n<<if $Bristle_Fire_Count is 2>>\n<<set $Bristle_Fire_Count to 3>>\nBristle : Burn it now! Now for sure.\n<<endif>>\n<<if $Bristle_Fire_Count is 3>>\n<<set $Bristle_Fire_Count to 4>>\nBristle : Thank you. You gave me strength.\n<<endif>>",
+		"position": {
+			"x": 960,
+			"y": 270
+		},
+		"colorID": 0
+	}
+]

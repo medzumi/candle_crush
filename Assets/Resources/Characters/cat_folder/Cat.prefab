@@ -117,6 +117,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   StartNode: Pussy_Start
+  _onCompleteNodes: []
 --- !u!1 &4474116667515466788
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +328,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3833726110923736910}
+        m_TargetAssemblyTypeName: NPCDialog, Assembly-CSharp
+        m_MethodName: HideDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &3883746637646933686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -365,6 +378,10 @@ PrefabInstance:
     - target: {fileID: 4019238253293430910, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: m_Name
       value: KeyInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430910, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430911, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: m_Pivot.x
@@ -451,6 +468,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4019238254529121862, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238254529121862, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238254529121862, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 114
       objectReference: {fileID: 0}
@@ -461,6 +486,10 @@ PrefabInstance:
     - target: {fileID: 4019238254529121862, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238254529121863, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}

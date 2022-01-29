@@ -1,0 +1,276 @@
+title: Bristle_Start
+tags: 
+colorID: 0
+position: 304,369
+---
+<<if $Bristle_Start is false>>
+<<set $Bristle_Start to true>>
+    Bristle : ...
+    : ...
+    Bristle : Is this how the world looked like before?...
+    Bristle : I ... Imagined it differently. Less.. White, I think.
+    : ...
+    Bristle : Now that there is light... I think it’s time for me to move on. I’ve been waiting for this. 
+    Bristle : Would you help me with that? You seem nice enough. 
+    : ...
+    Bristle : I’ll take that as a reluctant yes. 
+    Bristle : There must be canvases in my yard. I don’t know where they are exactly… But could you please fetch them and pile them up? 
+    Bristle : That’ll make everything easier. Please. 
+<<endif>>
+<<if $Canvases_On_Yard is 4>>
+[[Bristle_Complete1]]
+<<else>>
+Bristle : Gather my canvas for me, lighty.
+<<endif>>
+===
+title: Bristle_Complete1
+tags: 
+colorID: 0
+position: 656,290
+---
+<<if $Bristle_Complete1 is false>>
+<<set $Bristle_Complete1 to true>>
+Bristle : Wait, you actually did that? I didn’t think of a proper gratitude...
+Bristle : Thank you, I guess. 
+: ...
+Bristle : Now, one more thing to ask you. 
+Bristle : Just go near the pile and act carefree.. Like get super near it. And flicker your fire a little bit.
+Bristle : I don’t know what I had drawn while in the dark. 
+Bristle : I imagined lots of nature and people I love and the night sky. But is it really what’s on the canvases? 
+: ...
+<<endif>>
+[[Bristle_Fire_Node]]
+===
+title: Pile_To_Fire
+tags: 
+colorID: 7
+position: 629,613
+---
+<<if $Bristle_Fire_Count is 0>>
+<<endif>>
+
+<<if $Bristle_Fire_Count is 1>>
+Bristle : Wait, no! It’s not burning yet, is it? I want to stand near it for a little while longer. 
+Bristle : ...
+Bristle : ...
+Bristle : ...
+<<endif>>
+
+<<if $Bristle_Fire_Count is 2>>
+Briste : Wait wait wait wait wait. 
+Bristle : I said that out of politeness. I didn't want to keep you waiting. 
+Bristle : I need more time. 
+Bristle : ...
+Bristle : ...
+Bristle : ...
+<<endif>>
+
+<<if $Bristle_Fire_Count is 3>>
+Bristle : STOP!
+: ...
+Bristle : Okay sorry.
+Bristle : Forget what I asked.
+Bristle : You don’t need to do that. I don’t want it.
+: ...
+Bristle : It will be far better if I face what I did. It’s scary. 
+Bristle : It will be different from what I imagined but it’s what I did.
+Bristle : For better or for worse. 
+Bristle : Now go. 
+<<endif>>
+[[Bristle_Fire_Node]]
+===
+title: Bristle_Fire_Node
+tags: 
+colorID: 0
+position: 960,270
+---
+<<if $Bristle_Fire_Count is 0>>
+<<set $Bristle_Fire_Count to 1>>
+Bristle : Okay, what I’m saying is burn the pile. Please.
+<<endif>>
+<<if $Bristle_Fire_Count is 1>>
+<<set $Bristle_Fire_Count to 2>>
+Bristle : Okay, now go burn the pile!
+<<endif>>
+<<if $Bristle_Fire_Count is 2>>
+<<set $Bristle_Fire_Count to 3>>
+Bristle : Burn it now! Now for sure.
+<<endif>>
+<<if $Bristle_Fire_Count is 3>>
+<<set $Bristle_Fire_Count to 4>>
+Bristle : Thank you. You gave me strength.
+<<endif>>
+===
+title: Star_Start
+tags: 
+colorID: 0
+position: 1533,214
+---
+<<if $Star_Start is 0>>
+<<set $Star_Start to 1>>
+Star : Oh my God! 
+Star : Who am I seeing! 
+Star : What a bright personality!
+Star : Could I be honored to know your name?
+: ...
+Star : What a humble one!
+Star : That’s even better!
+Star : Oh well, allow me to introduce myself, even though you must already know who I am.
+Star : ROBERTO STARS 
+Star : Now, let me give you an autograph. 
+: ...
+Star : No? 
+Star : Ha-ha 
+Star : Oh c’mon...
+: ...
+Star : Pretty please? 
+: ...
+Star : ha 
+Star : ha ha 
+Star : AHAHAHAHAHAHA 
+Star : DAMN WHAT AM I SAYING?! 
+Star : WHO THE HECK NEEDS THOSE DARNED AUTOGRAPHS IN THIS DARKNESS? 
+: ...
+Star : I used to have everything! 
+Star : EVERYTHING! 
+Star : Do you understand? 
+Star : Money 
+Star : Fame 
+Star : Recognition
+Star : Peoples’ love 
+Star : And now?
+Star : And now everyone understands that I’m a fake! 
+Star : A star must shine no matter what! 
+Star : And that’s not something I could do...
+:...
+Star : I can not even light the way...
+: ...
+Star : ... But YOU can! You will be my guiding star! I dream of going to the mountains but I need equipment… Where would one find hiking equipment? 
+: ...
+Star : Hmm? Oh right! In the mountains! You are right! 
+: ...
+<<endif>>
+
+<<if $Star_Start is 1>>
+    <<if $Hiking_Equipment is 1>>
+        <<set $Star_Start to 2>>
+        Star : Ahh it’s so bright. Oh, it was you, my star~ 
+        Star : How is it going? 
+        : ...
+        Star : You found it? 
+        Star : I knew you could do it! 
+        [[Star_2]]
+    <<else>>
+        Star : I will be waiting here, find some hiking equipment, it should be somewhere in the mountains. 
+    <<endif>>
+<<endif>>
+
+<<if $Star_Start is 2>>
+    [[Star_2]]
+<<endif>>
+===
+title: Star_2
+tags: 
+colorID: 0
+position: 1819,207
+---
+Star : So, meet you at the top of the mountain?
+===
+title: Star_On_Mountain
+tags: 
+colorID: 0
+position: 1491,588
+---
+<<if $Star_On_Mountain is false>>
+<<set $Star_On_Mountain to true>>
+Star : PAAANT-PAAANT-PAAANT. I DID IT!
+: ...
+Star : WE did it 
+Star : ... 
+Star : Huh, so this is what they are like...
+Star : the real stars. 
+Star : Not to offend you, of course. 
+Star : You will always be my guiding star. 
+Star : And everyone wanted me to take this place, you know. 
+Star : And I didn't mind that either. 
+: ...
+Star : But over time everyone understood that all I do is play my role. 
+Star : What else can I do? 
+Star : I’m just an actor. 
+Star : Unlike you...
+Star : Your cause is just. 
+: ...
+Star : I would never be able to climb here by myself. 
+<<endif>>
+Star : Thank you.
+<<if $Star_On_Mountain is false>>
+: ...
+<<endif>>
+===
+title: Sasha_0
+tags: 
+colorID: 0
+position: 776,1140
+---
+Sasha : Wait a second here. Is that a new face I’m seeing? 
+Sasha : If you can call that flame of yours a face, that is. 
+: ...
+Sasha : Whichever it is, good. One more second in this emptiness and I’d start playing chess with myself.
+Sasha : If my eyes do not deceive me, you can see a thing or two in this world. While you’re at it, will you fetch one for me? 
+Sasha : It’s in a box with a cross drawn on it. Inside is a pair of sunglasses. 
+Sasha : Many would - and do, in fact - think that’s a piece of junk in our current state of living, but not me. 
+Sasha : I’ll make use of it, you just do your thing. So, you on it? 
+: ...
+Sasha : That’s what I thought! Now go, before you burn my eyes down.
+[[Sasha_1]]
+<<set $Sasha to 1>>
+===
+title: Sasha_1
+tags: 
+colorID: 0
+position: 1023,1074
+---
+<<if $Box_With_Cross is 1>>
+    Sasha : Wow, you actually managed to find it! And it’s not even a random box you drew a cross on. Good job.
+    Sasha : Now just let me try these on real quick. 
+    : ...
+    : ...
+    : ...
+    Sasha : So.
+    Sasha : This is what it’s like, huh. 
+    Sasha : I... If my eyesight was like this, I wouldn’t be as cheerful, too. 
+    Sasha : In case you never knew that about a cat or never saw one, cats see well in the dark, that’s what they do.
+    Sasha : And that might be one thing to be jealous of in this world. 
+    Sasha : It certainly does keep one entertained but not for an eternity. 
+    Sasha : So if I change my approach I just might make new connections with others and stay sane. 
+    : ...
+    Sasha : Huh. I’ll have to think about this for a moment. 
+    Sasha : You go. You have a bright personality, you know. Too bright for my eyes at times, even. So go. 
+    : ...
+    <<set $Sasha to 2>>
+<<else>>
+    Sasha : Return once you’ve found the box with a cross drawn on it.    
+<<endif>>
+===
+title: Sasha
+tags: 
+colorID: 0
+position: 410,1183
+---
+<<if $Sasha is 0>>
+    [[Sasha_0]]
+<<endif>>
+<<if $Sasha is 1>>
+    [[Sasha_1]]
+<<endif>>
+<<if $Sasha is 2>>
+    [[Sasha_2]]
+<<endif>>
+===
+title: Sasha_2
+tags: 
+colorID: 0
+position: 894,1394
+---
+Sasha : You still there? Sorry. I haven't gotten used to those glasses yet.
+===
