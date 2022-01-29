@@ -101,3 +101,110 @@ Bristle : Burn it now! Now for sure.
 Bristle : Thank you. You gave me strength.
 <<endif>>
 ===
+title: Star_Start
+tags: 
+colorID: 0
+position: 1533,214
+---
+<<if $Star_Start is 0>>
+<<set $Star_Start to 1>>
+Star : Oh my God! 
+Star : Who am I seeing! 
+Star : What a bright personality!
+Star : Could I be honored to know your name?
+: ...
+Star : What a humble one!
+Star : That’s even better!
+Star : Oh well, allow me to introduce myself, even though you must already know who I am.
+Star : ROBERTO STARS 
+Star : Now, let me give you an autograph. 
+: ...
+Star : No? 
+Star : Ha-ha 
+Star : Oh c’mon...
+: ...
+Star : Pretty please? 
+: ...
+Star : ha 
+Star : ha ha 
+Star : AHAHAHAHAHAHA 
+Star : DAMN WHAT AM I SAYING?! 
+Star : WHO THE HECK NEEDS THOSE DARNED AUTOGRAPHS IN THIS DARKNESS? 
+: ...
+Star : I used to have everything! 
+Star : EVERYTHING! 
+Star : Do you understand? 
+Star : Money 
+Star : Fame 
+Star : Recognition
+Star : Peoples’ love 
+Star : And now?
+Star : And now everyone understands that I’m a fake! 
+Star : A star must shine no matter what! 
+Star : And that’s not something I could do...
+:...
+Star : I can not even light the way...
+: ...
+Star : ... But YOU can! You will be my guiding star! I dream of going to the mountains but I need equipment… Where would one find hiking equipment? 
+: ...
+Star : Hmm? Oh right! In the mountains! You are right! 
+: ...
+<<endif>>
+
+<<if $Star_Start is 1>>
+    <<if $Hiking_Equipment is 1>>
+        <<set $Star_Start to 2>>
+        Star : Ahh it’s so bright. Oh, it was you, my star~ 
+        Star : How is it going? 
+        : ...
+        Star : You found it? 
+        Star : I knew you could do it! 
+        [[Star_2]]
+    <<else>>
+        Star : I will be waiting here, find some hiking equipment, it should be somewhere in the mountains. 
+    <<endif>>
+<<endif>>
+
+<<if $Star_Start is 2>>
+    [[Star_2]]
+<<endif>>
+===
+title: Star_2
+tags: 
+colorID: 0
+position: 1819,207
+---
+Star : So, meet you at the top of the mountain?
+===
+title: Star_On_Mountain
+tags: 
+colorID: 0
+position: 1491,588
+---
+<<if $Star_On_Mountain is false>>
+<<set $Star_On_Mountain to true>>
+Star : PAAANT-PAAANT-PAAANT. I DID IT!
+: ...
+Star : WE did it 
+Star : ... 
+Star : Huh, so this is what they are like...
+Star : the real stars. 
+Star : Not to offend you, of course. 
+Star : You will always be my guiding star. 
+Star : And everyone wanted me to take this place, you know. 
+Star : And I didn't mind that either. 
+: ...
+Star : But over time everyone understood that all I do is play my role. 
+Star : What else can I do? 
+Star : I’m just an actor. 
+Star : Unlike you...
+Star : Your cause is just. 
+: ...
+Star : I would never be able to climb here by myself. 
+<<endif>>
+Star : Thank you.
+<<if $Star_On_Mountain is false>>
+: ...
+<<endif>>
+
+===
