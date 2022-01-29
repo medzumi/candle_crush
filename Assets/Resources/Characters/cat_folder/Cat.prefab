@@ -116,7 +116,7 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
-  StartNode: Pussy_Start
+  StartNode: Sasha
   _onCompleteNodes: []
 --- !u!1 &4474116667515466788
 GameObject:

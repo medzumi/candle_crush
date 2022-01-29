@@ -1,7 +1,7 @@
 title: Bristle_Start
 tags: 
 colorID: 0
-position: 304,369
+position: 296,357
 ---
 <<if $Bristle_Start is false>>
 <<set $Bristle_Start to true>>
@@ -18,7 +18,8 @@ position: 304,369
     Bristle : That’ll make everything easier. Please. 
 <<endif>>
 <<if $Canvases_On_Yard is 4>>
-[[Bristle_Complete1]]
+<<RemoveItemWithCount Canvases_On_Yard 4>>
+<<jump Bristle_Comlpete1>>
 <<else>>
 Bristle : Gather my canvas for me, lighty.
 <<endif>>
@@ -26,7 +27,7 @@ Bristle : Gather my canvas for me, lighty.
 title: Bristle_Complete1
 tags: 
 colorID: 0
-position: 656,290
+position: 651,290
 ---
 <<if $Bristle_Complete1 is false>>
 <<set $Bristle_Complete1 to true>>
@@ -39,12 +40,12 @@ Bristle : I don’t know what I had drawn while in the dark.
 Bristle : I imagined lots of nature and people I love and the night sky. But is it really what’s on the canvases? 
 : ...
 <<endif>>
-[[Bristle_Fire_Node]]
+<<jump Bristle_Fire_Node>>
 ===
 title: Pile_To_Fire
 tags: 
 colorID: 7
-position: 629,613
+position: 625,608
 ---
 <<if $Bristle_Fire_Count is 0>>
 <<endif>>
@@ -77,12 +78,12 @@ Bristle : It will be different from what I imagined but it’s what I did.
 Bristle : For better or for worse. 
 Bristle : Now go. 
 <<endif>>
-[[Bristle_Fire_Node]]
+<<jump Bristle_Fire_Node>>
 ===
 title: Bristle_Fire_Node
 tags: 
 colorID: 0
-position: 960,270
+position: 958,266
 ---
 <<if $Bristle_Fire_Count is 0>>
 <<set $Bristle_Fire_Count to 1>>
@@ -104,7 +105,7 @@ Bristle : Thank you. You gave me strength.
 title: Star_Start
 tags: 
 colorID: 0
-position: 1533,214
+position: 1531,212
 ---
 <<if $Star_Start is 0>>
 <<set $Star_Start to 1>>
@@ -159,14 +160,14 @@ Star : Hmm? Oh right! In the mountains! You are right!
         : ...
         Star : You found it? 
         Star : I knew you could do it! 
-        [[Star_2]]
+        <<jump Star_2>>
     <<else>>
         Star : I will be waiting here, find some hiking equipment, it should be somewhere in the mountains. 
     <<endif>>
 <<endif>>
 
 <<if $Star_Start is 2>>
-    [[Star_2]]
+    <<jump Star_2>>
 <<endif>>
 ===
 title: Star_2
@@ -207,10 +208,17 @@ Star : Thank you.
 : ...
 <<endif>>
 ===
+title: Sasha_2
+tags: 
+colorID: 0
+position: 722,1383
+---
+Sasha : You still there? Sorry. I haven't gotten used to those glasses yet.
+===
 title: Sasha_0
 tags: 
 colorID: 0
-position: 776,1140
+position: 684,929
 ---
 Sasha : Wait a second here. Is that a new face I’m seeing? 
 Sasha : If you can call that flame of yours a face, that is. 
@@ -222,15 +230,16 @@ Sasha : Many would - and do, in fact - think that’s a piece of junk in our cur
 Sasha : I’ll make use of it, you just do your thing. So, you on it? 
 : ...
 Sasha : That’s what I thought! Now go, before you burn my eyes down.
-[[Sasha_1]]
 <<set $Sasha to 1>>
+<<jump Sasha_1>>
 ===
 title: Sasha_1
 tags: 
 colorID: 0
-position: 1023,1074
+position: 1021,1060
 ---
 <<if $Box_With_Cross is 1>>
+    <<RemoveItem Box_With_Cross>>
     Sasha : Wow, you actually managed to find it! And it’s not even a random box you drew a cross on. Good job.
     Sasha : Now just let me try these on real quick. 
     : ...
@@ -255,22 +264,15 @@ position: 1023,1074
 title: Sasha
 tags: 
 colorID: 0
-position: 410,1183
+position: 404,1181
 ---
 <<if $Sasha is 0>>
-    [[Sasha_0]]
+    <<jump Sasha_0>>
 <<endif>>
 <<if $Sasha is 1>>
-    [[Sasha_1]]
+    <<jump Sasha_1>>
 <<endif>>
 <<if $Sasha is 2>>
-    [[Sasha_2]]
+    <<jump Sasha_2>>
 <<endif>>
-===
-title: Sasha_2
-tags: 
-colorID: 0
-position: 894,1394
----
-Sasha : You still there? Sorry. I haven't gotten used to those glasses yet.
 ===
