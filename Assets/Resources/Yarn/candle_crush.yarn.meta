@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dc32538fd9abb8448944ec2ffe74da8b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  LastImportHadImplicitStringIDs: 0
+  LastImportHadAnyStrings: 0
+  isSuccessfullyParsed: 0
+  parseErrorMessages:
+  - 'Assets/Resources/Yarn/candle_crush.yarn: 24:0: Error: Expected an <<endif>>
+    to match the <<if>> statement on line 20
+
+    ===
+
+    ^^^
+
+'
