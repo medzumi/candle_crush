@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135bf0d32a60b244eb020d5f2281987b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainSceneName: SampleScene
+  MainSceneName: 'LevelDesign '
 --- !u!224 &1116077036996897454
 RectTransform:
   m_ObjectHideFlags: 0
