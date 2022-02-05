@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isUpdatable: 0
+  _offset: {x: 0, y: 0, z: 0}

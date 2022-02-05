@@ -521,6 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isUpdatable: 1
+  _offset: {x: 0, y: 0, z: 0}
 --- !u!1 &7560504954220511995
 GameObject:
   m_ObjectHideFlags: 0

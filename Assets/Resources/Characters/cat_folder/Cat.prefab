@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isUpdatable: 1
+  _offset: {x: 0, y: 0, z: 0}
 --- !u!114 &3833726110923736910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +131,7 @@ GameObject:
   - component: {fileID: 4474116667515466792}
   - component: {fileID: 4474116667515466793}
   - component: {fileID: 4474116667515466790}
+  - component: {fileID: 1344589055184831604}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -190,7 +192,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &4474116667515466793
 MonoBehaviour:
@@ -238,6 +240,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4474116667515466788}
   m_Mesh: {fileID: 0}
+--- !u!114 &1344589055184831604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4474116667515466788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.26359987, y: -3.0368156, z: 0}
+  - {x: 0.771708, y: -2.8334599, z: 0}
+  - {x: 0.056566477, y: -2.202219, z: 0}
+  - {x: -0.98698854, y: -2.5411015, z: 0}
+  m_ShapePathHash: 493129237
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -53066
 --- !u!1 &8400285976364945115
 GameObject:
   m_ObjectHideFlags: 0
