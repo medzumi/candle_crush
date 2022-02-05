@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7733046434219769465}
   - component: {fileID: 7733046434219769464}
   - component: {fileID: 7733046434219769471}
-  - component: {fileID: 7733046434219769470}
   - component: {fileID: 9179183121324581499}
   - component: {fileID: 3259796312305652889}
+  - component: {fileID: 1835483683713495097}
   m_Layer: 0
   m_Name: "\u0414\u0435\u0440\u0435\u0432\u043E 1 \u0448"
   m_TagString: Untagged
@@ -115,20 +115,7 @@ MonoBehaviour:
   - {x: -0.24567875, y: -2.2066445, z: 0}
   m_ShapePathHash: 1381039954
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42118
---- !u!114 &7733046434219769470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7733046434219769469}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
+  m_InstanceId: 305028
 --- !u!58 &9179183121324581499
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -159,3 +146,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isUpdatable: 0
   _offset: {x: 0, y: 0, z: 0}
+--- !u!114 &1835483683713495097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7733046434219769469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9fdfd03512a423c8243a69c165291c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 7733046434219769471}

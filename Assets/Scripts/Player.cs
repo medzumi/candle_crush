@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.MovePosition(_rigidbody.position + (_translation*_speed*Time.deltaTime ));
+        _rigidbody.MovePosition(_rigidbody.position + (_translation*_speed*Time.fixedDeltaTime ));
         _translation = Vector2.zero;
     }
 }
