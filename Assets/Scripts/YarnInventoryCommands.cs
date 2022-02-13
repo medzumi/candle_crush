@@ -22,13 +22,13 @@ namespace DefaultNamespace
         [YarnCommand("RemoveItem")]
         public static void RemoveItem(string id)
         {
-            InventorySystem.RemoveItem((new UniPair<string, int> {Key = id}));
+            InventorySystem.RemoveItem((new UniPair<string, int> {Key = id, Value = 1}));
         }
         
         [YarnCommand("RemoveItemWithCount")]
         public static void RemoveItemWithCount(string id, int count)
         {
-            InventorySystem.RemoveItem((new UniPair<string, int> {Key = id}));
+            InventorySystem.RemoveItem((new UniPair<string, int> {Key = id, Value = count}));
         }
     }
 }

@@ -101,7 +101,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8fd1093d170a2744b992cc1239fa3253, type: 2}
+  - {fileID: 2100000, guid: 5cd9e9f996f7004419a23fe80525ba72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -398,10 +398,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd17fc47d0db05241bec792c57d1605e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsDontDestroy: 0
   _rigidbody: {fileID: 1098479193}
   _skeletonFlipper: {fileID: 7351501424246650538}
   _animator: {fileID: 4944208451355385955}
   _speed: 10
+  _lighting: {fileID: 1678265808112163148}
 --- !u!95 &4944208451355385955
 Animator:
   serializedVersion: 3

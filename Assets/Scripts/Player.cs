@@ -1,14 +1,18 @@
 using System;
 using System.Collections.Generic;
+using DefaultNamespace;
 using Spine.Unity;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
+using Yarn.Unity;
 
-public class Player : MonoBehaviour
+public class Player : Singletone<Player>
 {
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private Transform _skeletonFlipper;
     [SerializeField] private Animator _animator;
     [SerializeField] private float _speed;
+    [SerializeField] private Light2D _lighting;
 
     private readonly Dictionary<Type, Dictionary<string, object>> _playerData = new Dictionary<Type, Dictionary<string, object>>();
     private Vector2 _translation = Vector2.zero;
@@ -68,6 +72,18 @@ public class Player : MonoBehaviour
         _animator.SetFloat("Speed", direction.magnitude);
         _translation += direction * _speed * Time.deltaTime;
         
+    }
+
+    [YarnCommand("IncreasePlayerLighting")]
+    public static void IncreaseLight(float increaseValue)
+    {
+        if (Instance)
+        {
+            var lighting = Instance._lighting;
+            lighting.pointLightInnerRadius += increaseValue;
+            lighting.pointLightOuterRadius += increaseValue;
+            lighting.intensity += increaseValue;
+        }
     }
 
     private void FixedUpdate()

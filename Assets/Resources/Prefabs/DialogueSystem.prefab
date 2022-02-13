@@ -1496,7 +1496,15 @@ MonoBehaviour:
   _prefab: {fileID: 685782969968512283, guid: c49054ee64425a04eaa760589bc8a08e, type: 3}
   _itemSprites:
   - Key: Box_With_Cross
-    Value: {fileID: -8345435589167100473, guid: f1f18c3c96581a84cb2915f5ed7d3c21, type: 3}
+    Value: {fileID: 21300000, guid: 2c6e0d7ce6ba0044ca78916a4c518e0e, type: 3}
+  - Key: Canvases_On_Yard_0
+    Value: {fileID: 21300000, guid: 3252635e5195aa24fa49eae01a4414d9, type: 3}
+  - Key: Canvases_On_Yard_1
+    Value: {fileID: 21300000, guid: dfac805b4f7723a48a8d5b821d52e3c4, type: 3}
+  - Key: Canvases_On_Yard_2
+    Value: {fileID: 21300000, guid: 7c94f8fef685c624483990e79cfd3326, type: 3}
+  - Key: Canvases_On_Yard_3
+    Value: {fileID: 21300000, guid: 95a083bb71c15a54b875d69e62443dfc, type: 3}
   _place: {fileID: 6267042448734648338}
 --- !u!114 &4805584577796258086
 MonoBehaviour:
