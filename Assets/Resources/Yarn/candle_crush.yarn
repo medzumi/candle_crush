@@ -19,7 +19,7 @@ position: 296,357
 <<endif>>
 <<if $Canvases_On_Yard_0 is 1 && $Canvases_On_Yard_1 is 1 && $Canvases_On_Yard_2 is 1 && $Canvases_On_Yard_3 is 1>>
     <<RemoveItemWithCount Canvases_On_Yard 4>>
-    <<jump Bristle_Comlpete1>>
+    <<jump Bristle_Complete1>>
 <<else>>
 Bristle : Gather my canvas for me, Lighty.
 <<endif>>
@@ -83,24 +83,23 @@ Bristle : Now go.
 title: Bristle_Fire_Node
 tags: 
 colorID: 0
-position: 958,266
+position: 958,267
 ---
-<<if $Bristle_Fire_Count is 0>>
-<<set $Bristle_Fire_Count to 1>>
-Bristle : Okay, what I’m saying is burn the pile. Please.
-<<endif>>
-<<if $Bristle_Fire_Count is 1>>
-<<set $Bristle_Fire_Count to 2>>
-Bristle : Okay, now go burn the pile!
+<<if $Bristle_Fire_Count is 3>>
+<<set $Bristle_Fire_Count to 4>>
+<<jump Pile_Fired>>
 <<endif>>
 <<if $Bristle_Fire_Count is 2>>
 <<set $Bristle_Fire_Count to 3>>
 Bristle : Burn it now! Now for sure.
 <<endif>>
-<<if $Bristle_Fire_Count is 3>>
-<<set $Bristle_Fire_Count to 4>>
-Bristle : Thank you. You gave me strength.
-<<IncreasePlayerLighting 0.5>>
+<<if $Bristle_Fire_Count is 1>>
+<<set $Bristle_Fire_Count to 2>>
+Bristle : Okay, now go burn the pile!
+<<endif>>
+<<if $Bristle_Fire_Count is 0>>
+<<set $Bristle_Fire_Count to 1>>
+Bristle : Okay, what I’m saying is burn the pile. Please.
 <<endif>>
 ===
 title: Star_Start
@@ -213,7 +212,7 @@ Lighty : ...
 title: Sasha_2
 tags: 
 colorID: 0
-position: 722,1383
+position: 720,1383
 ---
 Sasha : You still there? Sorry. I haven't gotten used to those glasses yet.
 ===
@@ -278,4 +277,12 @@ position: 404,1181
 <<if $Sasha is 2>>
     <<jump Sasha_2>>
 <<endif>>
+===
+title: Pile_Fired
+tags: 
+colorID: 0
+position: 951,614
+---
+Bristle : Thank you. You gave me strength.
+<<IncreasePlayerLighting 0.5>>
 ===
