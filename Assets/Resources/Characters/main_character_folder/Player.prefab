@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LightType: 0
+  m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.671
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -240,8 +240,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 1
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 5.0297813
+  m_PointLightInnerRadius: 5.02
+  m_PointLightOuterRadius: 6.02
   m_PointLightDistance: 1.22
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 34

@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: 296,357
 ---
+<<CanMove false>>
 <<if $Bristle_Start is false>>
 <<set $Bristle_Start to true>>
     Bristle : ...
@@ -23,12 +24,14 @@ position: 296,357
 <<else>>
 Bristle : Gather my canvas for me, Lighty.
 <<endif>>
+<<CanMove true>>
 ===
 title: Bristle_Complete1
 tags: 
 colorID: 0
 position: 637,294
 ---
+<<CanMove false>>
 <<if $Bristle_Complete1 is false>>
 <<set $Bristle_Complete1 to true>>
 Bristle : Wait, you actually did that? I didn’t think of a proper gratitude...
@@ -41,12 +44,14 @@ Bristle : I imagined lots of nature and people I love and the night sky. But is 
 Lighty : ...
 <<endif>>
 <<jump Bristle_Fire_Node>>
+<<CanMove true>>
 ===
 title: Pile_To_Fire
 tags: 
 colorID: 7
 position: 619,608
 ---
+<<CanMove false>>
 <<if $Bristle_Fire_Count is 0>>
 <<endif>>
 
@@ -79,12 +84,14 @@ Bristle : For better or for worse.
 Bristle : Now go. 
 <<endif>>
 <<jump Bristle_Fire_Node>>
+<<CanMove true>>
 ===
 title: Bristle_Fire_Node
 tags: 
 colorID: 0
 position: 958,267
 ---
+<<CanMove false>>
 <<if $Bristle_Fire_Count is 3>>
 <<set $Bristle_Fire_Count to 4>>
 <<jump Pile_Fired>>
@@ -101,12 +108,14 @@ Bristle : Okay, now go burn the pile!
 <<set $Bristle_Fire_Count to 1>>
 Bristle : Okay, what I’m saying is burn the pile. Please.
 <<endif>>
+<<CanMove true>>
 ===
 title: Star_Start
 tags: 
 colorID: 0
 position: 1343,335
 ---
+<<CanMove false>>
 <<if $Star_Start is 0>>
 <<set $Star_Start to 1>>
 Star : Oh my God! 
@@ -169,19 +178,23 @@ Lighty : ...
 <<if $Star_Start is 2>>
     <<jump Star_2>>
 <<endif>>
+<<CanMove true>>
 ===
 title: Star_2
 tags: 
 colorID: 0
 position: 1819,207
 ---
+<<CanMove false>>
 Star : So, meet you at the top of the mountain?
+<<CanMove true>>
 ===
 title: Star_On_Mountain
 tags: 
 colorID: 0
 position: 1544,575
 ---
+<<CanMove false>>
 <<if $Star_On_Mountain is false>>
 <<set $Star_On_Mountain to true>>
 Star : PAAANT-PAAANT-PAAANT. I DID IT!
@@ -202,25 +215,29 @@ Star : Unlike you...
 Star : Your cause is just. 
 Lighty : ...
 Star : I would never be able to climb here by myself. 
-<<IncreasePlayerLighting 0.5>>
+<<IncreasePlayerLighting 2>>
 <<endif>>
 Star : Thank you.
 <<if $Star_On_Mountain is false>>
 Lighty : ...
 <<endif>>
+<<CanMove true>>
 ===
 title: Sasha_2
 tags: 
 colorID: 0
 position: 720,1383
 ---
+<<CanMove false>>
 Sasha : You still there? Sorry. I haven't gotten used to those glasses yet.
+<<CanMove true>>
 ===
 title: Sasha_0
 tags: 
 colorID: 0
-position: 682,929
+position: 683,929
 ---
+<<CanMove false>>
 Sasha : Wait a second here. Is that a new face I’m seeing? 
 Sasha : If you can call that flame of yours a face, that is. 
 Lighty : ...
@@ -233,14 +250,15 @@ Lighty : ...
 Sasha : That’s what I thought! Now go, before you burn my eyes down.
 <<set $Sasha to 1>>
 <<jump Sasha_1>>
+<<CanMove true>>
 ===
 title: Sasha_1
 tags: 
 colorID: 0
-position: 1022,1058
+position: 1022,1056
 ---
+<<CanMove false>>
 <<if $Box_With_Cross is 1>>
-    <<RemoveItem Box_With_Cross>>
     Sasha : Wow, you actually managed to find it! And it’s not even a random box you drew a cross on. Good job.
     Sasha : Now just let me try these on real quick. 
     Lighty : ...
@@ -257,17 +275,20 @@ position: 1022,1058
     Sasha : Huh. I’ll have to think about this for a moment. 
     Sasha : You go. You have a bright personality, you know. Too bright for my eyes at times, even. So go. 
     Lighty : ...
-    <<IncreasePlayerLighting 0.5>>
+    <<RemoveItem Box_With_Cross>>
+    <<IncreasePlayerLighting 2>>
     <<set $Sasha to 2>>
 <<else>>
     Sasha : Return once you’ve found the box with a cross drawn on it.    
 <<endif>>
+<<CanMove true>>
 ===
 title: Sasha
 tags: 
 colorID: 0
 position: 404,1181
 ---
+<<CanMove false>>
 <<if $Sasha is 0>>
     <<jump Sasha_0>>
 <<endif>>
@@ -277,12 +298,15 @@ position: 404,1181
 <<if $Sasha is 2>>
     <<jump Sasha_2>>
 <<endif>>
+<<CanMove true>>
 ===
 title: Pile_Fired
 tags: 
 colorID: 0
-position: 951,614
+position: 952,614
 ---
+<<CanMove false>>
 Bristle : Thank you. You gave me strength.
-<<IncreasePlayerLighting 0.5>>
+<<IncreasePlayerLighting 1>>
+<<CanMove true>>
 ===
