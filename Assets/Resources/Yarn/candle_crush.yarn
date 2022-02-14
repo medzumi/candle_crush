@@ -19,7 +19,10 @@ position: 296,357
     Bristle : That’ll make everything easier. Please. 
 <<endif>>
 <<if $Canvases_On_Yard_0 is 1 && $Canvases_On_Yard_1 is 1 && $Canvases_On_Yard_2 is 1 && $Canvases_On_Yard_3 is 1>>
-    <<RemoveItemWithCount Canvases_On_Yard 4>>
+    <<RemoveItemWithCount Canvases_On_Yard_0 1>>
+    <<RemoveItemWithCount Canvases_On_Yard_1 1>>
+    <<RemoveItemWithCount Canvases_On_Yard_2 1>>
+    <<RemoveItemWithCount Canvases_On_Yard_3 1>>
     <<jump Bristle_Complete1>>
 <<else>>
 Bristle : Gather my canvas for me, Lighty.
@@ -169,6 +172,7 @@ Lighty : ...
         Lighty : ...
         Star : You found it? 
         Star : I knew you could do it! 
+        <<RemoveItemWithCount Hiking_Equipment 1>>
         <<jump Star_2>>
     <<else>>
         Star : I will be waiting here, find some hiking equipment, it should be somewhere in the mountains. 

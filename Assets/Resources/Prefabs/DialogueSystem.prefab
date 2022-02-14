@@ -1505,6 +1505,8 @@ MonoBehaviour:
     Value: {fileID: 21300000, guid: 7c94f8fef685c624483990e79cfd3326, type: 3}
   - Key: Canvases_On_Yard_3
     Value: {fileID: 21300000, guid: 95a083bb71c15a54b875d69e62443dfc, type: 3}
+  - Key: Hiking_Equipment
+    Value: {fileID: 21300000, guid: 85048b77dbda52048aad165712679489, type: 3}
   _place: {fileID: 6267042448734648338}
 --- !u!114 &4805584577796258086
 MonoBehaviour:
