@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957002371994361016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.756, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 5171111383589802522}
   m_RootOrder: 1
@@ -131,7 +131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5171111382198412871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.56, y: 0, z: 0}
+  m_LocalPosition: {x: 0.15, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5171111383589802522}
@@ -243,13 +243,14 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -0.6323595, y: -2.4081135, z: 0}
-  - {x: 0.64934444, y: -2.4814644, z: 0}
-  - {x: 0.8693981, y: -2.2187634, z: 0}
-  - {x: -0.7973995, y: -2.1270752, z: 0}
-  m_ShapePathHash: 284778677
+  - {x: -0.54600525, y: -2.485386, z: 0}
+  - {x: 0.087646484, y: -2.7175598, z: 0}
+  - {x: 0.27207947, y: -2.7087288, z: 0}
+  - {x: 0.4921341, y: -2.5869331, z: 0}
+  - {x: -0.42469025, y: -2.3634338, z: 0}
+  m_ShapePathHash: -1568965681
   m_Mesh: {fileID: 0}
-  m_InstanceId: -16004
+  m_InstanceId: 116200
 --- !u!114 &8040742947950384108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,9 +350,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.51}
+  m_Offset: {x: 0.13, y: -2.48}
   serializedVersion: 2
-  m_Radius: 1.11
+  m_Radius: 0.48
 --- !u!114 &8721688110849961616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,8 +381,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnComplete:
     m_PersistentCalls:
-      m_Calls: []
-  StartNode: Bristle_Start
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  StartNode: Star_Start
   _onCompleteNodes: []
 --- !u!1001 &5476298794428928058
 PrefabInstance:
@@ -534,18 +547,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4019238254529121862, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019238254529121862, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4019238254529121863, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 6372011135113043338}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
 --- !u!1 &8951057472272037956 stripped
@@ -558,14 +559,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4019238253293430911, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
   m_PrefabInstance: {fileID: 5476298794428928058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6372011135113043338 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1410285156897983920, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
-  m_PrefabInstance: {fileID: 5476298794428928058}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

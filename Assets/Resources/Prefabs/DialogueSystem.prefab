@@ -1444,6 +1444,93 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &6194920143465022481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237478211167036244}
+  - component: {fileID: 8842476760730197768}
+  m_Layer: 0
+  m_Name: CustomCommandSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1237478211167036244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6194920143465022481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8249291564967863941}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8842476760730197768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6194920143465022481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcf2724c0f94a519ae6df4029ca683e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDontDestroy: 0
+  _boolEvents:
+  - Key: TurnTower
+    Value:
+      m_PersistentCalls:
+        m_Calls: []
+  - Key: StarOnMountain
+    Value:
+      m_PersistentCalls:
+        m_Calls: []
+  _intEvents: []
+  _stringEvents:
+  - Key: PlaySound
+    Value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5407284367970390503}
+          m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
+          m_MethodName: Play2D
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Key: PlaySoundRand
+    Value:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5407284367970390503}
+          m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
+          m_MethodName: PlayRandomFromGroup2D
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6580163900166319884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,6 +1592,8 @@ MonoBehaviour:
     Value: {fileID: 21300000, guid: 7c94f8fef685c624483990e79cfd3326, type: 3}
   - Key: Canvases_On_Yard_3
     Value: {fileID: 21300000, guid: 95a083bb71c15a54b875d69e62443dfc, type: 3}
+  - Key: Hiking_Equipment
+    Value: {fileID: 21300000, guid: 85048b77dbda52048aad165712679489, type: 3}
   _place: {fileID: 6267042448734648338}
 --- !u!114 &4805584577796258086
 MonoBehaviour:
@@ -1532,6 +1621,126 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &6583204046852750537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 73484034038400733}
+  - component: {fileID: 5407284367970390503}
+  m_Layer: 0
+  m_Name: SoundPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &73484034038400733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583204046852750537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 320.31476, y: 240.52072, z: -0.16433479}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+  m_Children: []
+  m_Father: {fileID: 8249291564967863941}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5407284367970390503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6583204046852750537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff39735c2830514f92b1758f818b2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDontDestroy: 1
+  _prefab: {fileID: 2637589183241765404, guid: f35d4d907c40d534db1e4c07b89f144d, type: 3}
+  _audioClips:
+  - Key: Sasha_2
+    Value: {fileID: 8300000, guid: b4c4c0f18a3458e488ce0ee7cc3be7ef, type: 3}
+  - Key: Sasha_3
+    Value: {fileID: 8300000, guid: 13625d5eaeb23c34f99b83871d444c6c, type: 3}
+  - Key: Sasha_4
+    Value: {fileID: 8300000, guid: 7af467bf2491d0440b48800e49abe375, type: 3}
+  - Key: Sasha_5
+    Value: {fileID: 8300000, guid: 6edbc4fc7d028f94ca2ff42a3eccb661, type: 3}
+  - Key: Sasha_6
+    Value: {fileID: 8300000, guid: 53b53aa07a565574a8f098ed2a39f5eb, type: 3}
+  - Key: Sasha_7
+    Value: {fileID: 8300000, guid: 7d141ebdf6d53e24daa8c9a2841d7fcc, type: 3}
+  - Key: Sasha_8
+    Value: {fileID: 8300000, guid: c98fa57fd29108342b9f0fb5ef131c38, type: 3}
+  - Key: Sasha_9
+    Value: {fileID: 8300000, guid: c1aa9868b538da54787e9f561d959acb, type: 3}
+  - Key: Sasha_10
+    Value: {fileID: 8300000, guid: 77e789385e3bee244b17d58cf6124758, type: 3}
+  - Key: Sasha_11
+    Value: {fileID: 8300000, guid: e87dd208afd0d6342bda69341f9f1218, type: 3}
+  - Key: Sasha_12
+    Value: {fileID: 8300000, guid: e2947955919c17243a687a0766648f67, type: 3}
+  - Key: Sasha_13
+    Value: {fileID: 8300000, guid: 96468651366b3974eb3124339773e934, type: 3}
+  - Key: Bristle_1
+    Value: {fileID: 8300000, guid: 2b935177569e23449b7b2398156e1470, type: 3}
+  - Key: Bristle_2
+    Value: {fileID: 8300000, guid: 41e8571a3ca28a04c80b3e5f270a530a, type: 3}
+  - Key: Bristle_3
+    Value: {fileID: 8300000, guid: 417db7f27e2264949b1de4957dc4be9c, type: 3}
+  - Key: Bristle_4
+    Value: {fileID: 8300000, guid: 231c465e6c6617a4c9cb06c6e262fdfd, type: 3}
+  - Key: Bristle_5
+    Value: {fileID: 8300000, guid: 7d0554a404b6f294d8c177de62d09b0c, type: 3}
+  - Key: Bristle_6
+    Value: {fileID: 8300000, guid: 187ae6f57b123354198f18a48be0d833, type: 3}
+  - Key: Bristle_7
+    Value: {fileID: 8300000, guid: 3b31dd6b530f487468dc356afce13a18, type: 3}
+  - Key: Bristle_8
+    Value: {fileID: 8300000, guid: 36b9ecf459d0b6e4e8621e3975a93dd6, type: 3}
+  - Key: Bristle_9
+    Value: {fileID: 8300000, guid: 7dc65af73ce655647958406a5571864d, type: 3}
+  - Key: Bristle_10
+    Value: {fileID: 8300000, guid: 3482cb3a584ab4645bbee0550f0f8eed, type: 3}
+  - Key: Bristle_11
+    Value: {fileID: 8300000, guid: 5af89be4e84948042a38c232c97efed5, type: 3}
+  _groupClips:
+  - Key: Sasha
+    Value:
+    - {fileID: 8300000, guid: b4c4c0f18a3458e488ce0ee7cc3be7ef, type: 3}
+    - {fileID: 8300000, guid: 13625d5eaeb23c34f99b83871d444c6c, type: 3}
+    - {fileID: 8300000, guid: 7af467bf2491d0440b48800e49abe375, type: 3}
+    - {fileID: 8300000, guid: 6edbc4fc7d028f94ca2ff42a3eccb661, type: 3}
+    - {fileID: 8300000, guid: 53b53aa07a565574a8f098ed2a39f5eb, type: 3}
+    - {fileID: 8300000, guid: 7d141ebdf6d53e24daa8c9a2841d7fcc, type: 3}
+    - {fileID: 8300000, guid: c98fa57fd29108342b9f0fb5ef131c38, type: 3}
+    - {fileID: 8300000, guid: c1aa9868b538da54787e9f561d959acb, type: 3}
+    - {fileID: 8300000, guid: 77e789385e3bee244b17d58cf6124758, type: 3}
+    - {fileID: 8300000, guid: e87dd208afd0d6342bda69341f9f1218, type: 3}
+    - {fileID: 8300000, guid: e2947955919c17243a687a0766648f67, type: 3}
+    - {fileID: 8300000, guid: 96468651366b3974eb3124339773e934, type: 3}
+  - Key: Bristle
+    Value:
+    - {fileID: 8300000, guid: 2b935177569e23449b7b2398156e1470, type: 3}
+    - {fileID: 8300000, guid: 41e8571a3ca28a04c80b3e5f270a530a, type: 3}
+    - {fileID: 8300000, guid: 417db7f27e2264949b1de4957dc4be9c, type: 3}
+    - {fileID: 8300000, guid: 231c465e6c6617a4c9cb06c6e262fdfd, type: 3}
+    - {fileID: 8300000, guid: 7d0554a404b6f294d8c177de62d09b0c, type: 3}
+    - {fileID: 8300000, guid: 187ae6f57b123354198f18a48be0d833, type: 3}
+    - {fileID: 8300000, guid: 3b31dd6b530f487468dc356afce13a18, type: 3}
+    - {fileID: 8300000, guid: 36b9ecf459d0b6e4e8621e3975a93dd6, type: 3}
+    - {fileID: 8300000, guid: 7dc65af73ce655647958406a5571864d, type: 3}
+    - {fileID: 8300000, guid: 3482cb3a584ab4645bbee0550f0f8eed, type: 3}
+    - {fileID: 8300000, guid: 5af89be4e84948042a38c232c97efed5, type: 3}
 --- !u!1 &6874038250173783347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,6 +2340,8 @@ Transform:
   - {fileID: 4325336573506220687}
   - {fileID: 6722318908393146976}
   - {fileID: 3886168173220634620}
+  - {fileID: 1237478211167036244}
+  - {fileID: 73484034038400733}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

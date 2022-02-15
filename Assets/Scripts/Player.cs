@@ -16,6 +16,7 @@ public class Player : Singletone<Player>
 
     private readonly Dictionary<Type, Dictionary<string, object>> _playerData = new Dictionary<Type, Dictionary<string, object>>();
     private Vector2 _translation = Vector2.zero;
+    private bool _canMove = true;
 
     public T GetData<T>(string key) where T : class, new()
     {
@@ -40,6 +41,9 @@ public class Player : Singletone<Player>
 
     private void Update()
     {
+        if(!_canMove)
+            return;
+
         var direction = Vector2.zero;
         if (Input.GetKey(KeyCode.W))
         {
@@ -82,7 +86,16 @@ public class Player : Singletone<Player>
             var lighting = Instance._lighting;
             lighting.pointLightInnerRadius += increaseValue;
             lighting.pointLightOuterRadius += increaseValue;
-            lighting.intensity += increaseValue;
+            //lighting.intensity += increaseValue;
+        }
+    }
+
+    [YarnCommand("CanMove")]
+    public static void CanMove(bool value)
+    {
+        if (Instance)
+        {
+            Instance._canMove = value;
         }
     }
 
