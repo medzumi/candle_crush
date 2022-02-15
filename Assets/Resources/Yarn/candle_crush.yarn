@@ -1,7 +1,7 @@
 title: Bristle_Start
 tags: 
 colorID: 0
-position: 296,357
+position: 295,356
 ---
 <<CanMove false>>
 <<if $Bristle_Start is false>>
@@ -32,7 +32,7 @@ Bristle : Gather my canvas for me, Lighty.
 title: Bristle_Complete1
 tags: 
 colorID: 0
-position: 637,294
+position: 635,292
 ---
 <<CanMove false>>
 <<if $Bristle_Complete1 is false>>
@@ -52,7 +52,7 @@ Lighty : ...
 title: Pile_To_Fire
 tags: 
 colorID: 7
-position: 619,608
+position: 616,604
 ---
 <<CanMove false>>
 <<if $Bristle_Fire_Count is 0>>
@@ -92,7 +92,7 @@ Bristle : Now go.
 title: Bristle_Fire_Node
 tags: 
 colorID: 0
-position: 958,267
+position: 950,261
 ---
 <<CanMove false>>
 <<if $Bristle_Fire_Count is 3>>
@@ -116,7 +116,7 @@ Bristle : Okay, what I’m saying is burn the pile. Please.
 title: Star_Start
 tags: 
 colorID: 0
-position: 1343,335
+position: 1337,329
 ---
 <<CanMove false>>
 <<if $Star_Start is 0>>
@@ -187,7 +187,7 @@ Lighty : ...
 title: Star_2
 tags: 
 colorID: 0
-position: 1819,207
+position: 1815,205
 ---
 <<CanMove false>>
 Star : So, meet you at the top of the mountain?
@@ -196,7 +196,7 @@ Star : So, meet you at the top of the mountain?
 title: Star_On_Mountain
 tags: 
 colorID: 0
-position: 1544,575
+position: 1534,567
 ---
 <<CanMove false>>
 <<if $Star_On_Mountain is false>>
@@ -222,9 +222,6 @@ Star : I would never be able to climb here by myself.
 <<IncreasePlayerLighting 2>>
 <<endif>>
 Star : Thank you.
-<<if $Star_On_Mountain is false>>
-Lighty : ...
-<<endif>>
 <<CanMove true>>
 ===
 title: Sasha_2
@@ -307,10 +304,28 @@ position: 404,1181
 title: Pile_Fired
 tags: 
 colorID: 0
-position: 952,614
+position: 949,609
 ---
 <<CanMove false>>
 Bristle : Thank you. You gave me strength.
 <<IncreasePlayerLighting 1>>
 <<CanMove true>>
+===
+title: MountainWall
+tags: 
+colorID: 0
+position: 1873,562
+---
+<<if $Star_Start is 2>>
+    <<CustomCommand StarOnMountain true>>
+<<endif>>
+===
+title: FinishNode
+tags: 
+colorID: 0
+position: 1848,770
+---
+<<if $Bristle_Fire_Count is 4 && $Sasha is 2 && $Star_On_Mountain is true>>
+    <<CustomCommand TurnTower true>>
+<<endif>>
 ===
