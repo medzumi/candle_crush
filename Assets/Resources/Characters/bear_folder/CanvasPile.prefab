@@ -415,24 +415,8 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
-  StartNode: Pile_To_Fire
-  _onCompleteNodes:
-  - Key: Pile_Fired
-    Value:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7340123092327489604}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  StartNode: Piles
+  _onCompleteNodes: []
 --- !u!1 &8460421399558837013
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +677,10 @@ PrefabInstance:
     - target: {fileID: 4019238253293430910, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: m_Name
       value: KeyInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019238253293430910, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4019238253293430911, guid: 00a2853b539cd9a4aa97bb076c67bb2a, type: 3}
       propertyPath: m_Pivot.x

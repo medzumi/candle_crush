@@ -1,226 +1,132 @@
-title: Bristle_Start
+title: Bristle_0
 tags: 
 colorID: 0
-position: 291,351
+position: 268,1330
 ---
 <<CanMove false>>
-<<if $Bristle_Start is false>>
-<<set $Bristle_Start to true>>
-    Bristle : ...
-    Lighty : ...
-    <<CustomCommand PlaySoundRand Bristle>>
-    Bristle : Is this how the world looked like before?...
-    <<CustomCommand PlaySoundRand Bristle>>
-    Bristle : I ... Imagined it differently. Less.. White, I think.
-    Lighty : ...
-    <<CustomCommand PlaySoundRand Bristle>>
-    Bristle : Now that there is light... I think it’s time for me to move on. I’ve been waiting for this. 
-    <<CustomCommand PlaySoundRand Bristle>>
-    Bristle : Would you help me with that? You seem nice enough. 
-    Lighty : ...
-    <<CustomCommand PlaySoundRand Bristle>>
-    Bristle : I’ll take that as a reluctant yes. 
-    <<CustomCommand PlaySoundRand Bristle>>
-    Bristle : There must be canvases in my yard. I don’t know where they are exactly… But could you please fetch them and pile them up? 
-    <<CustomCommand PlaySoundRand Bristle>>
-    Bristle : That’ll make everything easier. Please. 
-<<endif>>
-<<if $Canvases_On_Yard_0 is 1 && $Canvases_On_Yard_1 is 1 && $Canvases_On_Yard_2 is 1 && $Canvases_On_Yard_3 is 1>>
-    <<RemoveItemWithCount Canvases_On_Yard_0 1>>
-    <<RemoveItemWithCount Canvases_On_Yard_1 1>>
-    <<RemoveItemWithCount Canvases_On_Yard_2 1>>
-    <<RemoveItemWithCount Canvases_On_Yard_3 1>>
-    <<jump Bristle_Complete1>>
-<<else>>
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Gather my canvas for me, Lighty.
-<<endif>>
+Bristle : ...
+Lighty : ...
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Is this how the world looked like before?...
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : I ... Imagined it differently. Less.. White, I think.
+Lighty : ...
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Now that there is light... I think it’s time for me to move on. I’ve been waiting for this. 
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Would you help me with that? You seem nice enough. 
+Lighty : ...
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : I’ll take that as a reluctant yes. 
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : There must be canvases in my yard. I don’t know where they are exactly… But could you please fetch them and pile them up? 
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : That’ll make everything easier. Please. 
+<<set $Bristle to 1>>
 <<CanMove true>>
 ===
-title: Bristle_Complete1
+title: Piles
 tags: 
 colorID: 0
-position: 633,288
+position: -442,1326
 ---
 <<CanMove false>>
-<<if $Bristle_Complete1 is false>>
-<<set $Bristle_Complete1 to true>>
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Wait, you actually did that? I didn’t think of a proper gratitude...
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Thank you, I guess. 
-Lighty : ...
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Now, one more thing to ask you. 
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Just go near the pile and act carefree.. Like get super near it. And flicker your fire a little bit.
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : I don’t know what I had drawn while in the dark. 
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : I imagined lots of nature and people I love and the night sky. But is it really what’s on the canvases? 
-Lighty : ...
+<<if $Piles is 0>>
+    <<jump Piles_0>>
 <<endif>>
-<<jump Bristle_Fire_Node>>
-<<CanMove true>>
-===
-title: Pile_To_Fire
-tags: 
-colorID: 7
-position: 611,596
----
-<<CanMove false>>
-<<if $Bristle_Fire_Count is 0>>
+<<if $Piles is 1>>
+    <<jump Piles_1>>
 <<endif>>
-
-<<if $Bristle_Fire_Count is 1>>
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Wait, no! It’s not burning yet, is it? I want to stand near it for a little while longer. 
-Bristle : ...
-Bristle : ...
-Bristle : ...
+<<if $Piles is 2>>
+    <<jump Piles_2>>
 <<endif>>
-
-<<if $Bristle_Fire_Count is 2>>
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Wait wait wait wait wait.
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : I said that out of politeness. I didn't want to keep you waiting. 
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : I need more time. 
-Bristle : ...
-Bristle : ...
-Bristle : ...
+<<if $Piles is 3>>
+    <<jump Piles_3>>
 <<endif>>
-
-<<if $Bristle_Fire_Count is 3>>
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : STOP!
-Lighty : ...
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Okay sorry.
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Forget what I asked.
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : You don’t need to do that. I don’t want it.
-Lighty : ...
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : It will be far better if I face what I did. It’s scary. 
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : It will be different from what I imagined but it’s what I did.
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : For better or for worse. 
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Now go. 
-<<endif>>
-<<jump Bristle_Fire_Node>>
-<<CanMove true>>
-===
-title: Bristle_Fire_Node
-tags: 
-colorID: 0
-position: 948,253
----
-<<CanMove false>>
-<<if $Bristle_Fire_Count is 3>>
-<<set $Bristle_Fire_Count to 4>>
-<<jump Pile_Fired>>
-<<endif>>
-<<if $Bristle_Fire_Count is 2>>
-<<set $Bristle_Fire_Count to 3>>
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Burn it now! Now for sure.
-<<endif>>
-<<if $Bristle_Fire_Count is 1>>
-<<set $Bristle_Fire_Count to 2>>
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Okay, now go burn the pile!
-<<endif>>
-<<if $Bristle_Fire_Count is 0>>
-<<set $Bristle_Fire_Count to 1>>
-<<CustomCommand PlaySoundRand Bristle>>
-Bristle : Okay, what I’m saying is burn the pile. Please.
+<<if $Piles is 4>>
+    <<jump Piles_4>> 
 <<endif>>
 <<CanMove true>>
 ===
 title: Star_Start
 tags: 
 colorID: 0
-position: 1335,328
+position: 1201,1306
 ---
 <<CanMove false>>
 <<if $Star_Start is 0>>
 <<set $Star_Start to 1>>
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Oh my God! 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Who am I seeing!
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : What a bright personality!
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Could I be honored to know your name?
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : What a humble one!
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : That’s even better!
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Oh well, allow me to introduce myself, even though you must already know who I am.
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : ROBERTO STARS 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Now, let me give you an autograph. 
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : No? 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Ha-ha 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Oh c’mon...
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Pretty please? 
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : ha 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : ha ha 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : AHAHAHAHAHAHA 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : DAMN WHAT AM I SAYING?! 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : WHO THE HECK NEEDS THOSE DARNED AUTOGRAPHS IN THIS DARKNESS? 
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : I used to have everything!
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : EVERYTHING! 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Do you understand? 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Money 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Fame 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Recognition
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Peoples’ love 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : And now?
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : And now everyone understands that I’m a fake! 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : A star must shine no matter what! 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : And that’s not something I could do...
 Lighty :...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : I can not even light the way...
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : ... But YOU can! You will be my guiding star! I dream of going to the mountains but I need equipment… Where would one find hiking equipment?
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Hmm? Oh right! In the mountains! You are right! 
 Lighty : ...
 <<endif>>
@@ -228,19 +134,19 @@ Lighty : ...
 <<if $Star_Start is 1>>
     <<if $Hiking_Equipment is 1>>
         <<set $Star_Start to 2>>
-        <<CustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Star>>
         Star : Ahh it’s so bright. Oh, it was you, my star~ 
-        <<CustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Star>>
         Star : How is it going? 
         Lighty : ...
-        <<CustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Star>>
         Star : You found it? 
-        <<CustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Star>>
         Star : I knew you could do it! 
         <<RemoveItemWithCount Hiking_Equipment 1>>
         <<jump Star_2>>
     <<else>>
-        <<CustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Star>>
         Star : I will be waiting here, find some hiking equipment, it should be somewhere in the mountains. 
     <<endif>>
 <<endif>>
@@ -253,92 +159,92 @@ Lighty : ...
 title: Star_2
 tags: 
 colorID: 0
-position: 1813,201
+position: 1430,1310
 ---
 <<CanMove false>>
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : So, meet you at the top of the mountain?
 <<CanMove true>>
 ===
 title: Star_On_Mountain
 tags: 
 colorID: 0
-position: 1532,565
+position: 1200,1522
 ---
 <<CanMove false>>
 <<if $Star_On_Mountain is false>>
 <<set $Star_On_Mountain to true>>
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : PAAANT-PAAANT-PAAANT. I DID IT!
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : WE did it 
 Star : ... 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Huh, so this is what they are like...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : the real stars. 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Not to offend you, of course. 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : You will always be my guiding star. 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : And everyone wanted me to take this place, you know. 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : And I didn't mind that either. 
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : But over time everyone understood that all I do is play my role. 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : What else can I do? 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : I’m just an actor. 
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Unlike you...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Your cause is just. 
 Lighty : ...
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : I would never be able to climb here by myself. 
 <<IncreasePlayerLighting 2>>
 <<endif>>
-<<CustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Star>>
 Star : Thank you.
 <<CanMove true>>
 ===
 title: Sasha_2
 tags: 
 colorID: 0
-position: 716,1379
+position: 722,1765
 ---
 <<CanMove false>>
-<<CustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySoundRand Sasha>>
 Sasha : You still there? Sorry. I haven't gotten used to those glasses yet.
 <<CanMove true>>
 ===
 title: Sasha_0
 tags: 
 colorID: 0
-position: 677,923
+position: 723,1330
 ---
 <<CanMove false>>
-<<CustomCommand PlaySound Sasha_2>>
+<<StringCustomCommand PlaySound Sasha_2>>
 Sasha : Wait a second here. Is that a new face I’m seeing? 
-<<CustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySoundRand Sasha>>
 Sasha : If you can call that flame of yours a face, that is. 
 Lighty : ...
-<<CustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySoundRand Sasha>>
 Sasha : Whichever it is, good. One more second in this emptiness and I’d start playing chess with myself.
-<<CustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySoundRand Sasha>>
 Sasha : If my eyes do not deceive me, you can see a thing or two in this world. While you’re at it, will you fetch one for me? 
-<<CustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySoundRand Sasha>>
 Sasha : It’s in a box with a cross drawn on it. Inside is a pair of sunglasses. 
-<<CustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySoundRand Sasha>>
 Sasha : Many would - and do, in fact - think that’s a piece of junk in our current state of living, but not me. 
-<<CustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySoundRand Sasha>>
 Sasha : I’ll make use of it, you just do your thing. So, you on it? 
 Lighty : ...
-<<CustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySoundRand Sasha>>
 Sasha : That’s what I thought! Now go, before you burn my eyes down.
 <<set $Sasha to 1>>
 <<jump Sasha_1>>
@@ -347,42 +253,42 @@ Sasha : That’s what I thought! Now go, before you burn my eyes down.
 title: Sasha_1
 tags: 
 colorID: 0
-position: 1014,1050
+position: 723,1548
 ---
 <<CanMove false>>
 <<if $Box_With_Cross is 1>>
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : Wow, you actually managed to find it! And it’s not even a random box you drew a cross on. Good job.
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : Now just let me try these on real quick. 
     Lighty : ...
     Lighty : ...
     Lighty : ...
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : So.
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : This is what it’s like, huh. 
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : I... If my eyesight was like this, I wouldn’t be as cheerful, too. 
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : In case you never knew that about a cat or never saw one, cats see well in the dark, that’s what they do.
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : And that might be one thing to be jealous of in this world. 
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : It certainly does keep one entertained but not for an eternity. 
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : So if I change my approach I just might make new connections with others and stay sane. 
     Lighty : ...
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : Huh. I’ll have to think about this for a moment. 
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : You go. You have a bright personality, you know. Too bright for my eyes at times, even. So go. 
     Lighty : ...
     <<RemoveItem Box_With_Cross>>
     <<IncreasePlayerLighting 2>>
     <<set $Sasha to 2>>
 <<else>>
-    <<CustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySoundRand Sasha>>
     Sasha : Return once you’ve found the box with a cross drawn on it.    
 <<endif>>
 <<CanMove true>>
@@ -390,7 +296,7 @@ position: 1014,1050
 title: Sasha
 tags: 
 colorID: 0
-position: 404,1181
+position: 491,1332
 ---
 <<CanMove false>>
 <<if $Sasha is 0>>
@@ -404,32 +310,188 @@ position: 404,1181
 <<endif>>
 <<CanMove true>>
 ===
-title: Pile_Fired
+title: Bristle_5
 tags: 
 colorID: 0
-position: 943,601
+position: 268,2414
 ---
 <<CanMove false>>
-<<CustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySoundRand Bristle>>
 Bristle : Thank you. You gave me strength.
-<<IncreasePlayerLighting 1>>
 <<CanMove true>>
 ===
 title: MountainWall
 tags: 
 colorID: 0
-position: 1873,562
+position: 1200,1738
 ---
 <<if $Star_Start is 2>>
-    <<CustomCommand StarOnMountain true>>
+    <<BoolCustomCommand StarOnMountain true>>
+    <<BoolCustomCommand StarOnCastle false>>
 <<endif>>
+===
+title: CheckFinishNode
+tags: 
+colorID: 0
+position: 1199,1095
+---
+<<if $Bristle is 5 && $Sasha is 2 && $Star_On_Mountain is true>>
+    <<BoolCustomCommand TurnTower true>>
+<<endif>>
+===
+title: Bristle
+tags: 
+colorID: 0
+position: 7,1326
+---
+<<CanMove false>>
+<<if $Bristle is 0>>
+    <<jump Bristle_0>>
+<<endif>>
+<<if $Bristle is 1>>
+    <<jump Bristle_1>>
+<<endif>>
+<<if $Bristle is 2>>
+    <<jump Bristle_2>>
+<<endif>>
+<<if $Bristle is 3>>
+    <<jump Bristle_3>>
+<<endif>>
+<<if $Bristle is 4>>
+    <<jump Bristle_4>>
+<<endif>>
+<<if $Bristle is 5>>
+    <<jump Bristle_5>>
+<<endif>>
+<<CanMove true>>
+===
+title: Bristle_1
+tags: 
+colorID: 0
+position: 274,1558
+---
+<<if $Canvases_On_Yard_0 is 1 && $Canvases_On_Yard_1 is 1 && $Canvases_On_Yard_2 is 1 && $Canvases_On_Yard_3 is 1>>
+    <<StringCustomCommand PlaySoundRand Bristle>>
+    Bristle : Wait, you actually did that? I didn’t think of a proper gratitude...
+    <<StringCustomCommand PlaySoundRand Bristle>>
+    <<set $Bristle to 2>>
+    <<RemoveItemWithCount Canvases_On_Yard_0 1>>
+    <<RemoveItemWithCount Canvases_On_Yard_1 1>>
+    <<RemoveItemWithCount Canvases_On_Yard_2 1>>
+    <<RemoveItemWithCount Canvases_On_Yard_3 1>>
+    <<BoolCustomCommand TurnPiles true>>
+    Bristle : Thank you, I guess. 
+    Lighty : ...
+    <<StringCustomCommand PlaySoundRand Bristle>>
+    Bristle : Now, one more thing to ask you. 
+    <<StringCustomCommand PlaySoundRand Bristle>>
+    Bristle : Just go near the pile and act carefree.. Like get super near it. And flicker your fire a little bit.
+    <<StringCustomCommand PlaySoundRand Bristle>>
+    Bristle : I don’t know what I had drawn while in the dark. 
+    <<StringCustomCommand PlaySoundRand Bristle>>
+    Bristle : I imagined lots of nature and people I love and the night sky. But is it really what’s on the canvases? 
+    Lighty : ...
+<<else>>
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Gather my canvas for me, Lighty.
+<<endif>>
+<<CanMove true>>
+===
+title: Bristle_3
+tags: 
+colorID: 0
+position: 270,1980
+---
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle: Okay, now go burn the pile!
+<<CanMove true>>
+===
+title: Bristle_2
+tags: 
+colorID: 0
+position: 273,1768
+---
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle :Okay, what I’m saying is burn the pile. Please.
+<<CanMove true>>
+===
+title: Bristle_4
+tags: 
+colorID: 0
+position: 271,2198
+---
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Burn it now! Now for sure.
+<<CanMove true>>
+===
+title: Piles_0
+tags: 
+colorID: 0
+position: -220,1326
+---
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Wait, no! It’s not burning yet, is it? I want to stand near it for a little while longer. 
+Bristle : ...
+Bristle : ...
+Bristle : ...
+<<set $Bristle to 3>>
+<<set $Piles to 1>>
+<<jump Bristle_3>>
+<<CanMove true>>
+===
+title: Piles_1
+tags: 
+colorID: 0
+position: -221,1549
+---
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Wait wait wait wait wait.
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : I said that out of politeness. I didn't want to keep you waiting. 
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : I need more time. 
+Bristle : ...
+Bristle : ...
+Bristle : ...
+<<set $Bristle to 4>>
+<<set $Piles to 2>>
+<<jump Bristle_4>>
+<<CanMove true>>
+===
+title: Piles_2
+tags: 
+colorID: 0
+position: -214,1771
+---
+<<StringCustomCommand PlaySoundRand Bristle>>
+<<BoolCustomCommand TurnPilesTrigger false>>
+Bristle : STOP!
+Lighty : ...
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Okay sorry.
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Forget what I asked.
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : You don’t need to do that. I don’t want it.
+Lighty : ...
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : It will be far better if I face what I did. It’s scary. 
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : It will be different from what I imagined but it’s what I did.
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : For better or for worse. 
+<<StringCustomCommand PlaySoundRand Bristle>>
+Bristle : Now go. 
+<<IncreasePlayerLighting 2>>
+<<set $Bristle to 5>>
+<<jump Bristle_5>>
+<<CanMove true>>
 ===
 title: FinishNode
 tags: 
 colorID: 0
-position: 1848,770
+position: 1198,874
 ---
-<<if $Bristle_Fire_Count is 4 && $Sasha is 2 && $Star_On_Mountain is true>>
-    <<CustomCommand TurnTower true>>
-<<endif>>
+<<CanMove false>>
+<<StringCustomCommand PlayComics FinalComics>>
 ===

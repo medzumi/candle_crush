@@ -117,7 +117,7 @@ MonoBehaviour:
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
-  StartNode: Bristle_Start
+  StartNode: Bristle
   _onCompleteNodes: []
 --- !u!1 &395837255214476334
 GameObject:

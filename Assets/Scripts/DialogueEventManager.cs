@@ -14,8 +14,26 @@ namespace DefaultNamespace
 
         [SerializeField] private List<UniPair<string, UnityEvent<string>>> _stringEvents;
 
-        [YarnCommand("CustomCommand")]
-        public static void Command(string key, object obj)
+        [YarnCommand("StringCustomCommand")]
+        public static void Command(string key, string obj)
+        {
+            if (Instance)
+            {
+                Instance.CustomCommand(key, obj);    
+            }
+        }
+        
+        [YarnCommand("BoolCustomCommand")]
+        public static void Command(string key, bool obj)
+        {
+            if (Instance)
+            {
+                Instance.CustomCommand(key, obj);    
+            }
+        }
+        
+        [YarnCommand("IntCustomCommand")]
+        public static void Command(string key, int obj)
         {
             if (Instance)
             {
@@ -23,18 +41,19 @@ namespace DefaultNamespace
             }
         }
 
-        private void CustomCommand(string key, object obj)
+        private void CustomCommand(string key, int obj)
         {
-            if (obj is int intObj)
-            {
-                _intEvents.FirstOrDefault(pair => string.Equals(pair.Key, key)).Value.Invoke(intObj);   
-            }else if (obj is string stringObj)
-            {
-                _stringEvents.FirstOrDefault(pair => string.Equals(pair.Key, key)).Value.Invoke(stringObj);
-            }else if (obj is bool boolObj)
-            {
-                _boolEvents.FirstOrDefault(pair => string.Equals(pair.Key, key)).Value.Invoke(boolObj);
-            }
+            _intEvents.FirstOrDefault(pair => string.Equals(pair.Key, key)).Value?.Invoke(obj);
+        }
+
+        private void CustomCommand(string key, bool obj)
+        {
+            _boolEvents.FirstOrDefault(pair => string.Equals(pair.Key, key)).Value?.Invoke(obj);
+        }
+        
+        private void CustomCommand(string key, string obj)
+        {
+            _stringEvents.FirstOrDefault(pair => string.Equals(pair.Key, key)).Value?.Invoke(obj);
         }
     }
 }
