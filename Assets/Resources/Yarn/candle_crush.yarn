@@ -1,26 +1,27 @@
 title: Bristle_0
 tags: 
 colorID: 0
-position: 268,1330
+position: 267,1329
 ---
 <<CanMove false>>
+<<StringCustomCommand PlaySound Bristle_10>>
 Bristle : ...
 Lighty : ...
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_1>>
 Bristle : Is this how the world looked like before?...
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_6>>
 Bristle : I ... Imagined it differently. Less.. White, I think.
 Lighty : ...
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_10>>
 Bristle : Now that there is light... I think it’s time for me to move on. I’ve been waiting for this. 
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_8>>
 Bristle : Would you help me with that? You seem nice enough. 
 Lighty : ...
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_1>>
 Bristle : I’ll take that as a reluctant yes. 
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_8>>
 Bristle : There must be canvases in my yard. I don’t know where they are exactly… But could you please fetch them and pile them up? 
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_8>>
 Bristle : That’ll make everything easier. Please. 
 <<set $Bristle to 1>>
 <<CanMove true>>
@@ -215,36 +216,34 @@ Star : Thank you.
 title: Sasha_2
 tags: 
 colorID: 0
-position: 722,1765
+position: 721,1765
 ---
 <<CanMove false>>
-<<StringCustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySound Sasha_9>>
 Sasha : You still there? Sorry. I haven't gotten used to those glasses yet.
 <<CanMove true>>
 ===
 title: Sasha_0
 tags: 
 colorID: 0
-position: 723,1330
+position: 720,1327
 ---
 <<CanMove false>>
 <<StringCustomCommand PlaySound Sasha_2>>
 Sasha : Wait a second here. Is that a new face I’m seeing? 
-<<StringCustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySound Sasha_6>>
 Sasha : If you can call that flame of yours a face, that is. 
 Lighty : ...
-<<StringCustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySound Sasha_10>>
 Sasha : Whichever it is, good. One more second in this emptiness and I’d start playing chess with myself.
-<<StringCustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySound Sasha_3>>
 Sasha : If my eyes do not deceive me, you can see a thing or two in this world. While you’re at it, will you fetch one for me? 
-<<StringCustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySound Sasha_9>>
 Sasha : It’s in a box with a cross drawn on it. Inside is a pair of sunglasses. 
-<<StringCustomCommand PlaySoundRand Sasha>>
-Sasha : Many would - and do, in fact - think that’s a piece of junk in our current state of living, but not me. 
-<<StringCustomCommand PlaySoundRand Sasha>>
-Sasha : I’ll make use of it, you just do your thing. So, you on it? 
+<<StringCustomCommand PlaySound Sasha_6>>
+Sasha : Many would - and do, in fact - think that’s a piece of junk in our current state of living, but not me. I’ll make use of it, you just do your thing. So, you on it? 
 Lighty : ...
-<<StringCustomCommand PlaySoundRand Sasha>>
+<<StringCustomCommand PlaySound Sasha_7>>
 Sasha : That’s what I thought! Now go, before you burn my eyes down.
 <<set $Sasha to 1>>
 <<jump Sasha_1>>
@@ -253,42 +252,38 @@ Sasha : That’s what I thought! Now go, before you burn my eyes down.
 title: Sasha_1
 tags: 
 colorID: 0
-position: 723,1548
+position: 721,1545
 ---
 <<CanMove false>>
 <<if $Box_With_Cross is 1>>
-    <<StringCustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySound Sasha_7>>
     Sasha : Wow, you actually managed to find it! And it’s not even a random box you drew a cross on. Good job.
-    <<StringCustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySound Sasha_13>>
     Sasha : Now just let me try these on real quick. 
     Lighty : ...
     Lighty : ...
     Lighty : ...
-    <<StringCustomCommand PlaySoundRand Sasha>>
-    Sasha : So.
-    <<StringCustomCommand PlaySoundRand Sasha>>
-    Sasha : This is what it’s like, huh. 
-    <<StringCustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySound Sasha_9>>
+    Sasha : So. This is what it’s like, huh. 
+    <<StringCustomCommand PlaySound Sasha_10>>
     Sasha : I... If my eyesight was like this, I wouldn’t be as cheerful, too. 
-    <<StringCustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySound Sasha_3>>
     Sasha : In case you never knew that about a cat or never saw one, cats see well in the dark, that’s what they do.
-    <<StringCustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySound Sasha_9>>
     Sasha : And that might be one thing to be jealous of in this world. 
-    <<StringCustomCommand PlaySoundRand Sasha>>
-    Sasha : It certainly does keep one entertained but not for an eternity. 
-    <<StringCustomCommand PlaySoundRand Sasha>>
-    Sasha : So if I change my approach I just might make new connections with others and stay sane. 
+    <<StringCustomCommand PlaySound Sasha_10>>
+    Sasha : It certainly does keep one entertained but not for an eternity. So if I change my approach I just might make new connections with others and stay sane. 
     Lighty : ...
-    <<StringCustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySound Sasha_5>>
     Sasha : Huh. I’ll have to think about this for a moment. 
-    <<StringCustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySound Sasha_9>>
     Sasha : You go. You have a bright personality, you know. Too bright for my eyes at times, even. So go. 
     Lighty : ...
     <<RemoveItem Box_With_Cross>>
     <<IncreasePlayerLighting 2>>
     <<set $Sasha to 2>>
 <<else>>
-    <<StringCustomCommand PlaySoundRand Sasha>>
+    <<StringCustomCommand PlaySound Sasha_6>>
     Sasha : Return once you’ve found the box with a cross drawn on it.    
 <<endif>>
 <<CanMove true>>
@@ -313,10 +308,10 @@ position: 491,1332
 title: Bristle_5
 tags: 
 colorID: 0
-position: 268,2414
+position: 267,2413
 ---
 <<CanMove false>>
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_9>>
 Bristle : Thank you. You gave me strength.
 <<CanMove true>>
 ===
@@ -368,12 +363,12 @@ position: 7,1326
 title: Bristle_1
 tags: 
 colorID: 0
-position: 274,1558
+position: 271,1555
 ---
 <<if $Canvases_On_Yard_0 is 1 && $Canvases_On_Yard_1 is 1 && $Canvases_On_Yard_2 is 1 && $Canvases_On_Yard_3 is 1>>
-    <<StringCustomCommand PlaySoundRand Bristle>>
+    <<StringCustomCommand PlaySound Bristle_8>>
     Bristle : Wait, you actually did that? I didn’t think of a proper gratitude...
-    <<StringCustomCommand PlaySoundRand Bristle>>
+    <<StringCustomCommand PlaySound Bristle_9>>
     <<set $Bristle to 2>>
     <<RemoveItemWithCount Canvases_On_Yard_0 1>>
     <<RemoveItemWithCount Canvases_On_Yard_1 1>>
@@ -382,17 +377,16 @@ position: 274,1558
     <<BoolCustomCommand TurnPiles true>>
     Bristle : Thank you, I guess. 
     Lighty : ...
-    <<StringCustomCommand PlaySoundRand Bristle>>
+    <<StringCustomCommand PlaySound Bristle_2>>
     Bristle : Now, one more thing to ask you. 
-    <<StringCustomCommand PlaySoundRand Bristle>>
+    <<StringCustomCommand PlaySound Bristle_2>>
     Bristle : Just go near the pile and act carefree.. Like get super near it. And flicker your fire a little bit.
-    <<StringCustomCommand PlaySoundRand Bristle>>
-    Bristle : I don’t know what I had drawn while in the dark. 
-    <<StringCustomCommand PlaySoundRand Bristle>>
-    Bristle : I imagined lots of nature and people I love and the night sky. But is it really what’s on the canvases? 
+    <<StringCustomCommand PlaySound Bristle_6>>
+    Bristle : I don’t know what I had drawn while in the dark. I imagined lots of nature and people I love and the night sky. But is it really what’s on the canvases? 
     Lighty : ...
+    <<jump Bristle_2>>
 <<else>>
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_2>>
 Bristle : Gather my canvas for me, Lighty.
 <<endif>>
 <<CanMove true>>
@@ -400,27 +394,27 @@ Bristle : Gather my canvas for me, Lighty.
 title: Bristle_3
 tags: 
 colorID: 0
-position: 270,1980
+position: 268,1977
 ---
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_10>>
 Bristle: Okay, now go burn the pile!
 <<CanMove true>>
 ===
 title: Bristle_2
 tags: 
 colorID: 0
-position: 273,1768
+position: 272,1767
 ---
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_3>>
 Bristle :Okay, what I’m saying is burn the pile. Please.
 <<CanMove true>>
 ===
 title: Bristle_4
 tags: 
 colorID: 0
-position: 271,2198
+position: 271,2197
 ---
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_10>>
 Bristle : Burn it now! Now for sure.
 <<CanMove true>>
 ===
@@ -429,7 +423,7 @@ tags:
 colorID: 0
 position: -220,1326
 ---
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_4>>
 Bristle : Wait, no! It’s not burning yet, is it? I want to stand near it for a little while longer. 
 Bristle : ...
 Bristle : ...
@@ -444,12 +438,10 @@ tags:
 colorID: 0
 position: -221,1549
 ---
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_1>>
 Bristle : Wait wait wait wait wait.
-<<StringCustomCommand PlaySoundRand Bristle>>
-Bristle : I said that out of politeness. I didn't want to keep you waiting. 
-<<StringCustomCommand PlaySoundRand Bristle>>
-Bristle : I need more time. 
+<<StringCustomCommand PlaySound Bristle_4>>
+Bristle : I said that out of politeness. I didn't want to keep you waiting. I need more time. 
 Bristle : ...
 Bristle : ...
 Bristle : ...
@@ -463,25 +455,19 @@ tags:
 colorID: 0
 position: -214,1771
 ---
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_5>>
 <<BoolCustomCommand TurnPilesTrigger false>>
 Bristle : STOP!
 Lighty : ...
-<<StringCustomCommand PlaySoundRand Bristle>>
-Bristle : Okay sorry.
-<<StringCustomCommand PlaySoundRand Bristle>>
-Bristle : Forget what I asked.
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_1>>
+Bristle : Okay sorry. Forget what I asked.
+<<StringCustomCommand PlaySound Bristle_6>>
 Bristle : You don’t need to do that. I don’t want it.
 Lighty : ...
-<<StringCustomCommand PlaySoundRand Bristle>>
+<<StringCustomCommand PlaySound Bristle_10>>
 Bristle : It will be far better if I face what I did. It’s scary. 
-<<StringCustomCommand PlaySoundRand Bristle>>
-Bristle : It will be different from what I imagined but it’s what I did.
-<<StringCustomCommand PlaySoundRand Bristle>>
-Bristle : For better or for worse. 
-<<StringCustomCommand PlaySoundRand Bristle>>
-Bristle : Now go. 
+<<StringCustomCommand PlaySound Bristle_6>>
+Bristle : It will be different from what I imagined but it’s what I did. For better or for worse. Now go. 
 <<IncreasePlayerLighting 2>>
 <<set $Bristle to 5>>
 <<jump Bristle_5>>
