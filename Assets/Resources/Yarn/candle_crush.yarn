@@ -52,7 +52,7 @@ position: -442,1326
 title: Star_Start
 tags: 
 colorID: 0
-position: 1194,1302
+position: 1193,1301
 ---
 <<CanMove false>>
 <<if $Star_Start is 0>>
@@ -124,11 +124,11 @@ Lighty : ...
         <<StringCustomCommand PlaySound Roberto_9>>
         Star : I knew you could do it! 
         <<RemoveItemWithCount Hiking_Equipment 1>>
+        <<StringCustomCommand PlaySound QuestDone>>
         <<jump Star_2>>
     <<else>>
         <<StringCustomCommand PlaySound Roberto_9>>
         Star : I will be waiting here, find some hiking equipment, it should be somewhere in the mountains. 
-    <<StringCustomCommand PlaySound QuestDone>>
     <<endif>>
 <<endif>>
 
