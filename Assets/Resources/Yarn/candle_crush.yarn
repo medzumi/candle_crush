@@ -52,82 +52,62 @@ position: -442,1326
 title: Star_Start
 tags: 
 colorID: 0
-position: 1201,1306
+position: 1196,1304
 ---
 <<CanMove false>>
 <<if $Star_Start is 0>>
 <<set $Star_Start to 1>>
-<<StringCustomCommand PlaySound Star>>
 Star : Oh my God! 
-<<StringCustomCommand PlaySound Star>>
 Star : Who am I seeing!
-<<StringCustomCommand PlaySound Star>>
 Star : What a bright personality!
-<<StringCustomCommand PlaySound Star>>
 Star : Could I be honored to know your name?
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_2>>
 Star : What a humble one!
-<<StringCustomCommand PlaySound Star>>
 Star : That’s even better!
-<<StringCustomCommand PlaySound Star>>
 Star : Oh well, allow me to introduce myself, even though you must already know who I am.
-<<StringCustomCommand PlaySound Star>>
 Star : ROBERTO STARS 
-<<StringCustomCommand PlaySound Star>>
 Star : Now, let me give you an autograph. 
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_8>>
 Star : No? 
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_2>>
 Star : Ha-ha 
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_6>>
 Star : Oh c’mon...
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_8>>
 Star : Pretty please? 
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
 Star : ha 
-<<StringCustomCommand PlaySound Star>>
 Star : ha ha 
-<<StringCustomCommand PlaySound Star>>
 Star : AHAHAHAHAHAHA 
-<<StringCustomCommand PlaySound Star>>
 Star : DAMN WHAT AM I SAYING?! 
-<<StringCustomCommand PlaySound Star>>
 Star : WHO THE HECK NEEDS THOSE DARNED AUTOGRAPHS IN THIS DARKNESS? 
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_4>>
 Star : I used to have everything!
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_5>>
 Star : EVERYTHING! 
-<<StringCustomCommand PlaySound Star>>
 Star : Do you understand? 
-<<StringCustomCommand PlaySound Star>>
 Star : Money 
-<<StringCustomCommand PlaySound Star>>
 Star : Fame 
-<<StringCustomCommand PlaySound Star>>
 Star : Recognition
-<<StringCustomCommand PlaySound Star>>
 Star : Peoples’ love 
-<<StringCustomCommand PlaySound Star>>
 Star : And now?
-<<StringCustomCommand PlaySound Star>>
-Star : And now everyone understands that I’m a fake! 
-<<StringCustomCommand PlaySound Star>>
+Star : And now everyone understands that I’m a fake!
+<<StringCustomCommand PlaySound Roberto_3>>
 Star : A star must shine no matter what! 
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_6>>
 Star : And that’s not something I could do...
 Lighty :...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_10>>
 Star : I can not even light the way...
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_1>>
 Star : ... But YOU can! You will be my guiding star! I dream of going to the mountains but I need equipment… Where would one find hiking equipment?
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_7>>
 Star : Hmm? Oh right! In the mountains! You are right! 
 Lighty : ...
 <<endif>>
@@ -135,19 +115,18 @@ Lighty : ...
 <<if $Star_Start is 1>>
     <<if $Hiking_Equipment is 1>>
         <<set $Star_Start to 2>>
-        <<StringCustomCommand PlaySound Star>>
-        Star : Ahh it’s so bright. Oh, it was you, my star~ 
-        <<StringCustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Roberto_7>>
+        Star : Ahh it’s so bright. Oh, it was you, my star
         Star : How is it going? 
         Lighty : ...
-        <<StringCustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Roberto_8>>
         Star : You found it? 
-        <<StringCustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Roberto_9>>
         Star : I knew you could do it! 
         <<RemoveItemWithCount Hiking_Equipment 1>>
         <<jump Star_2>>
     <<else>>
-        <<StringCustomCommand PlaySound Star>>
+        <<StringCustomCommand PlaySound Roberto_9>>
         Star : I will be waiting here, find some hiking equipment, it should be somewhere in the mountains. 
     <<endif>>
 <<endif>>
@@ -160,10 +139,10 @@ Lighty : ...
 title: Star_2
 tags: 
 colorID: 0
-position: 1430,1310
+position: 1429,1309
 ---
 <<CanMove false>>
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_3>>
 Star : So, meet you at the top of the mountain?
 <<CanMove true>>
 ===
@@ -175,41 +154,33 @@ position: 1200,1522
 <<CanMove false>>
 <<if $Star_On_Mountain is false>>
 <<set $Star_On_Mountain to true>>
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_6>>
 Star : PAAANT-PAAANT-PAAANT. I DID IT!
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
 Star : WE did it 
 Star : ... 
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_1>>
 Star : Huh, so this is what they are like...
-<<StringCustomCommand PlaySound Star>>
 Star : the real stars. 
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_10>>
 Star : Not to offend you, of course. 
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_10>>
 Star : You will always be my guiding star. 
-<<StringCustomCommand PlaySound Star>>
 Star : And everyone wanted me to take this place, you know. 
-<<StringCustomCommand PlaySound Star>>
 Star : And I didn't mind that either. 
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_6>>
 Star : But over time everyone understood that all I do is play my role. 
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_3>>
 Star : What else can I do? 
-<<StringCustomCommand PlaySound Star>>
 Star : I’m just an actor. 
-<<StringCustomCommand PlaySound Star>>
 Star : Unlike you...
-<<StringCustomCommand PlaySound Star>>
 Star : Your cause is just. 
 Lighty : ...
-<<StringCustomCommand PlaySound Star>>
+<<StringCustomCommand PlaySound Roberto_7>>
 Star : I would never be able to climb here by myself. 
 <<IncreasePlayerLighting 2>>
 <<endif>>
-<<StringCustomCommand PlaySound Star>>
 Star : Thank you.
 <<CanMove true>>
 ===

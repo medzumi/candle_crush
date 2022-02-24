@@ -2111,6 +2111,28 @@ MonoBehaviour:
     Value: {fileID: 8300000, guid: 3482cb3a584ab4645bbee0550f0f8eed, type: 3}
   - Key: Bristle_11
     Value: {fileID: 8300000, guid: 5af89be4e84948042a38c232c97efed5, type: 3}
+  - Key: Roberto_1
+    Value: {fileID: 8300000, guid: 2e271b057972f924d8939eb14ae678e8, type: 3}
+  - Key: Roberto_2
+    Value: {fileID: 8300000, guid: 8ea1f411211daa94c93edcc5ac613ddf, type: 3}
+  - Key: Roberto_3
+    Value: {fileID: 8300000, guid: 971169d53d4548140b1512fd1dbb8df1, type: 3}
+  - Key: Roberto_4
+    Value: {fileID: 8300000, guid: d7fc007d2c7e1f443897eb8958db8103, type: 3}
+  - Key: Roberto_5
+    Value: {fileID: 8300000, guid: 5fd994494820e5643b7bc2fe32c230b4, type: 3}
+  - Key: Roberto_6
+    Value: {fileID: 8300000, guid: 7ffa6802bc157e74b89883af3b43fdfd, type: 3}
+  - Key: Roberto_7
+    Value: {fileID: 8300000, guid: c662ef0907d0e414099aa60b0f10f5fd, type: 3}
+  - Key: Roberto_8
+    Value: {fileID: 8300000, guid: 7e95faad4934c5a4d90395884c5b034c, type: 3}
+  - Key: Roberto_8
+    Value: {fileID: 8300000, guid: c98fa57fd29108342b9f0fb5ef131c38, type: 3}
+  - Key: Roberto_9
+    Value: {fileID: 8300000, guid: 53540727970ebbc40bc440c16d7435a4, type: 3}
+  - Key: Roberto_10
+    Value: {fileID: 8300000, guid: 6f421113072ef45419365bc113c2c412, type: 3}
   _groupClips:
   - Key: Sasha
     Value:
