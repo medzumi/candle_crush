@@ -309,7 +309,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 1098479193}
   _skeletonFlipper: {fileID: 7351501424246650538}
   _animator: {fileID: 4944208451355385955}
-  _speed: 10
+  _speed: 22
   _lighting: {fileID: 1678265808112163148}
 --- !u!95 &4944208451355385955
 Animator:
