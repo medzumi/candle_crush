@@ -1,7 +1,7 @@
 title: Bristle_0
 tags: 
 colorID: 0
-position: 267,1329
+position: 267,1328
 ---
 <<CanMove false>>
 <<StringCustomCommand PlaySound Bristle_10>>
@@ -52,7 +52,7 @@ position: -442,1326
 title: Star_Start
 tags: 
 colorID: 0
-position: 1196,1304
+position: 1194,1302
 ---
 <<CanMove false>>
 <<if $Star_Start is 0>>
@@ -128,6 +128,7 @@ Lighty : ...
     <<else>>
         <<StringCustomCommand PlaySound Roberto_9>>
         Star : I will be waiting here, find some hiking equipment, it should be somewhere in the mountains. 
+    <<StringCustomCommand PlaySound QuestDone>>
     <<endif>>
 <<endif>>
 
@@ -149,7 +150,7 @@ Star : So, meet you at the top of the mountain?
 title: Star_On_Mountain
 tags: 
 colorID: 0
-position: 1200,1522
+position: 1200,1521
 ---
 <<CanMove false>>
 <<if $Star_On_Mountain is false>>
@@ -180,6 +181,8 @@ Lighty : ...
 <<StringCustomCommand PlaySound Roberto_7>>
 Star : I would never be able to climb here by myself. 
 <<IncreasePlayerLighting 2>>
+<<StringCustomCommand PlayComics Star>>
+<<StringCustomCommand PlaySound QuestDone>>
 <<endif>>
 Star : Thank you.
 <<CanMove true>>
@@ -187,7 +190,7 @@ Star : Thank you.
 title: Sasha_2
 tags: 
 colorID: 0
-position: 721,1765
+position: 720,1764
 ---
 <<CanMove false>>
 <<StringCustomCommand PlaySound Sasha_9>>
@@ -223,7 +226,7 @@ Sasha : That’s what I thought! Now go, before you burn my eyes down.
 title: Sasha_1
 tags: 
 colorID: 0
-position: 721,1545
+position: 720,1543
 ---
 <<CanMove false>>
 <<if $Box_With_Cross is 1>>
@@ -253,6 +256,7 @@ position: 721,1545
     <<RemoveItem Box_With_Cross>>
     <<IncreasePlayerLighting 2>>
     <<set $Sasha to 2>>
+    <<StringCustomCommand PlaySound QuestDone>>
 <<else>>
     <<StringCustomCommand PlaySound Sasha_6>>
     Sasha : Return once you’ve found the box with a cross drawn on it.    
@@ -334,7 +338,7 @@ position: 7,1326
 title: Bristle_1
 tags: 
 colorID: 0
-position: 271,1555
+position: 269,1553
 ---
 <<if $Canvases_On_Yard_0 is 1 && $Canvases_On_Yard_1 is 1 && $Canvases_On_Yard_2 is 1 && $Canvases_On_Yard_3 is 1>>
     <<StringCustomCommand PlaySound Bristle_8>>
@@ -345,6 +349,7 @@ position: 271,1555
     <<RemoveItemWithCount Canvases_On_Yard_1 1>>
     <<RemoveItemWithCount Canvases_On_Yard_2 1>>
     <<RemoveItemWithCount Canvases_On_Yard_3 1>>
+    <<StringCustomCommand PlaySound QuestDone>>
     <<BoolCustomCommand TurnPiles true>>
     Bristle : Thank you, I guess. 
     Lighty : ...
@@ -424,7 +429,7 @@ Bristle : ...
 title: Piles_2
 tags: 
 colorID: 0
-position: -214,1771
+position: -214,1767
 ---
 <<StringCustomCommand PlaySound Bristle_5>>
 <<BoolCustomCommand TurnPilesTrigger false>>
@@ -440,6 +445,7 @@ Bristle : It will be far better if I face what I did. It’s scary.
 <<StringCustomCommand PlaySound Bristle_6>>
 Bristle : It will be different from what I imagined but it’s what I did. For better or for worse. Now go. 
 <<IncreasePlayerLighting 2>>
+<<StringCustomCommand PlaySound QuestDone>>
 <<set $Bristle to 5>>
 <<jump Bristle_5>>
 <<CanMove true>>

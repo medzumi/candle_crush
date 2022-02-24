@@ -2133,6 +2133,8 @@ MonoBehaviour:
     Value: {fileID: 8300000, guid: 53540727970ebbc40bc440c16d7435a4, type: 3}
   - Key: Roberto_10
     Value: {fileID: 8300000, guid: 6f421113072ef45419365bc113c2c412, type: 3}
+  - Key: QuestDone
+    Value: {fileID: 8300000, guid: 335f1a569e317764ab00253bbe451867, type: 3}
   _groupClips:
   - Key: Sasha
     Value:
